@@ -70,6 +70,17 @@ def fetch_all_fixtures() -> str | None:
         print(f"Error during request: {e}")
         return None
 
+def fetch_club_history(club_name: str) -> str:
+    """Fetches the full Elo history for a specific club."""
+    url = f"{BASE_URL}{club_name.replace(' ', '')}"
+    print(f"Attempting to fetch data from: {url}")
+    try:
+        response = requests.get(url, timeout=10)
+        response.raise_for_status() # Raise HTTPError for bad responses
+        return response.text
+    except Exception as e:
+        print(f"Error fetching history for {club_name}: {e}")
+        return ""
 
 # This block allows us to test the file directly
 if __name__ == "__main__":
