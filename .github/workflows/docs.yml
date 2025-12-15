@@ -21,6 +21,17 @@ jobs:
       with:
         python-version: '3.11' # Ensure this matches your project version
 
+    - name: 📦 Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # Check for requirements.txt and install all necessary libraries (requests, pandas, etc.)
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        else
+          pip install requests pandas 
+        fi
+    # -----------------------------------------------------------------------------------
+
     - name: 📝 Generate New Documentation Content
       # Execute the Python script and save the output to a temporary file
       # This step creates 'GENERATED_DOCS.md'
