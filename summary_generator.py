@@ -65,10 +65,10 @@ def clean_docstring(doc):
 def generate_readme_section(functions):
     """Generates a Markdown section detailing key functions."""
     output = """
-    # ⚽ Club Elo Predictor
+# ⚽ Club Elo Predictor
     
 A Python-based project to fetch live fixture data from the Club Elo API, calculate the traditional 1X2 match probabilities (Home Win, Draw, Away Win), and identify the single most likely outcome across a set of fixtures.\n\n
-    """
+"""
     output += "## 🚀 Core Logic and Functions\n"
 
     current_section = None
