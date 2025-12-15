@@ -1,0 +1,53 @@
+name: Auto-Generate Function Docs
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+    paths:
+      - 'src/**.py' # Only run when source files or the generator script change
+      - 'summary_generator.py'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  update_docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: ⬇️ Checkout code
+      uses: actions/checkout@v4
+
+    - name: 🛠️ Set up Python Environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11' # Ensure this matches your project version
+
+    - name: 📝 Generate New Documentation Content
+      # Execute the Python script and save the output to a temporary file
+      # This step creates 'GENERATED_DOCS.md'
+      run: |
+        # Ensure Python can find modules in the 'src' directory
+        export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+        
+        # Run the generator script and pipe the output to a new file
+        python summary_generator.py > GENERATED_DOCS.md
+
+    - name: 🔄 Insert Generated Docs into CLUBELO_COMPARISON.md
+      # This step takes the temporary file and creates the final document.
+      run: |
+        DOCS_CONTENT=$(cat GENERATED_DOCS.md)
+        
+        # Create the new file with a header and the generated content
+        echo "# ClubElo Comparison Tool - Function Documentation" > CLUBELO_COMPARISON.md
+        echo "" >> CLUBELO_COMPARISON.md
+        echo "This document provides a detailed, auto-generated summary of the core Python functions used in the project, extracted directly from docstrings." >> CLUBELO_COMPARISON.md
+        echo "" >> CLUBELO_COMPARISON.md
+        echo "$DOCS_CONTENT" >> CLUBELO_COMPARISON.md
+
+
+    - name: ⬆️ Commit and Push Changes to Documentation File
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        # Commit message clearly states the change was automated
+        commit_message: "docs: Auto-update CLUBELO_COMPARISON.md with function summary"
+        # Commit the new documentation file
+        files: CLUBELO_COMPARISON.md
