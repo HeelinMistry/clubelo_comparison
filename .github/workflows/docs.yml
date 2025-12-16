@@ -48,15 +48,28 @@ jobs:
     - name: 🔄 Insert Generated Docs into CLUBELO_COMPARISON.md
       # This step takes the temporary file and creates the final document.
       run: |
+        # 1. Create the target directory if it doesn't exist
+        mkdir -p data
+        
+        # 2. Define the target file path
+        TARGET_FILE="data/CLUBELO_COMPARISON.md"
+        
+        # 3. Read the generated temporary content
         DOCS_CONTENT=$(cat GENERATED_DOCS.md)
         
-        # Create the new file with a header and the generated content
-        echo "# ClubElo Comparison Tool - Function Documentation" > CLUBELO_COMPARISON.md
-        echo "" >> CLUBELO_COMPARISON.md
-        echo "This document provides a detailed, auto-generated summary of the core Python functions used in the project, extracted directly from docstrings." >> CLUBELO_COMPARISON.md
-        echo "" >> CLUBELO_COMPARISON.md
-        echo "$DOCS_CONTENT" >> CLUBELO_COMPARISON.md
+        # 4. Create the final file inside the 'data/' folder
+        echo "# ClubElo Comparison Tool - Function Documentation" > $TARGET_FILE
+        echo "" >> $TARGET_FILE
+        echo "This document provides a detailed, auto-generated summary of the core Python functions used in the project, extracted directly from docstrings." >> $TARGET_FILE
+        echo "" >> $TARGET_FILE
+        echo "$DOCS_CONTENT" >> $TARGET_FILE
 
+    # --- NEW CLEANUP STEP 1: Remove the temporary file locally ---
+    - name: 🧹 Cleanup Temporary File
+      run: |
+        rm GENERATED_DOCS.md
+      # Note: This simply removes the file from the runner environment before the final commit.
+      # It doesn't affect the repository history.
 
     - name: ⬆️ Commit and Push Changes to Documentation File
       uses: stefanzweifel/git-auto-commit-action@v5

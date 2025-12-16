@@ -4,7 +4,6 @@ from typing import Tuple, Any, Dict
 
 import pandas as pd
 
-# Assuming these are correct relative or absolute imports based on your setup
 from src.api_client import fetch_all_fixtures, fetch_ratings_by_date
 from src.data_processor import process_fixtures, filter_level_1
 from src.predictor import find_most_likely_outcome, find_max_momentum_match
@@ -71,6 +70,15 @@ def run_analysis(fixtures_raw: pd.DataFrame, ratings_raw: pd.DataFrame):
 
     # --- 3. Print Comprehensive Summary ---
     print_analysis_summary(
+        most_likely,
+        most_momentum_favored,
+        best_home_form,
+        best_away_form
+    )
+
+    # --- 4. Write Summary to File ---
+    write_analysis_summary_to_file(
+        fixtures,
         most_likely,
         most_momentum_favored,
         best_home_form,
@@ -155,6 +163,104 @@ def print_analysis_summary(
     print(f"Upcoming Match: {best_away_form['Home']} vs. Away")
     print("-" * 30)
 
+
+def write_analysis_summary_to_file(
+        fixtures: pd.DataFrame,
+        most_likely: Dict[str, Any],
+        most_momentum_favored: pd.Series,
+        best_home_form: pd.Series,
+        best_away_form: pd.Series,
+        file_path: str = "data/analysis_summary.txt"
+):
+    """
+    Formats and writes the multi-section summary of the analysis to a specified file.
+
+    Args:
+        fixtures: The upcoming fixtures.
+        most_likely: The result from find_most_likely_outcome (highest weighted score).
+        most_momentum_favored: The result from find_max_momentum_match (biggest form differential).
+        best_home_form: The fixture row containing the team with the highest Home_Momentum.
+        best_away_form: The fixture row containing the team with the highest Away_Momentum.
+        file_path: The path to the file where the output should be written.
+
+    """
+
+    # Use a 'with' statement to ensure the file is correctly opened and closed,
+    # even if errors occur.
+    with open(file_path, 'w') as f:
+        # Helper function to write a line followed by a newline
+        def write_line(line):
+            f.write(line + "\n")
+
+        # --- HEADER ---
+        write_line("=" * 70)
+        write_line("             ⚽ WEEKLY FIXTURE INSIGHTS ⚽")
+        write_line("=" * 70)
+
+        write_line("\n--- ⚽ Upcoming Fixtures & Momentum ---")
+        write_line(fixtures.to_string(index=False, float_format="%.1f"))
+
+        # --- 1. MOST MOMENTUM-FAVORED PREDICTION ---
+        write_line("\n" + "=" * 70)
+        write_line("      🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)")
+        write_line("=" * 70)
+
+        favored_diff = most_momentum_favored['Momentum_Diff']
+
+        # Determine predicted winner based on momentum differential sign
+        if favored_diff >= 0:
+            predicted_winner = most_momentum_favored['Home']
+            raw_prob = most_momentum_favored['HomeWin %']
+            result_str = f"Home WIN: {predicted_winner}"
+        else:
+            predicted_winner = most_momentum_favored['Away']
+            raw_prob = most_momentum_favored['AwayWin %']
+            result_str = f"Away WIN: {predicted_winner}"
+
+        write_line(f"Fixture:       **{most_momentum_favored['Home']}** vs. **{most_momentum_favored['Away']}**")
+        write_line(f"Prediction:    {result_str}")
+        write_line(f"Probability:   {raw_prob:.1f}% (Raw Elo)")
+        write_line(f"Form Advantage: **{favored_diff:+.1f} Elo** (Largest differential this week)")
+        write_line("-" * 30)
+
+        # --- 2. MOST CONFIDENT PREDICTION ---
+        write_line("\n## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)")
+        outcome = most_likely['Outcome']
+
+        if outcome == 'HomeWin %':
+            result_str = f"Home WIN: {most_likely['Home']}"
+            momentum_for_favored = most_likely['Home_Momentum']
+        elif outcome == 'AwayWin %':
+            result_str = f"Away WIN: {most_likely['Away']}"
+            momentum_for_favored = most_likely['Away_Momentum']
+        else:  # Draw
+            result_str = "DRAW (Neutral Momentum Favored)"
+            momentum_for_favored = most_likely['Momentum_Diff']  # Use the Diff for Draw context
+
+        write_line(f"Fixture:       **{most_likely['Home']}** vs. **{most_likely['Away']}**")
+        write_line(f"Prediction:    {result_str}")
+        write_line(f"Probability:   {most_likely['Probability']:.1f}% (Raw Elo)")
+        write_line(f"Form Advantage: {momentum_for_favored:+.2f} Elo")
+        write_line(f"Confidence:    {most_likely['Confidence_Score']:.2f} (Maximized)")
+        write_line("-" * 30)
+
+        # --- 3. TEAM FORM SPOTLIGHTS ---
+        write_line("\n## ✨ TEAM FORM SPOTLIGHTS")
+
+        # BEST HOME FORM
+        write_line(f"**Best Recent Home Form:**")
+        write_line(
+            f"Team:          **{best_home_form['Home']}** (Momentum: {best_home_form['Home_Momentum']:+.1f} Elo Gain)")
+        write_line(f"Upcoming Match: Home vs. {best_home_form['Away']}")
+
+        # BEST AWAY FORM
+        write_line(f"\n**Best Recent Away Form:**")
+        write_line(
+            f"Team:          **{best_away_form['Away']}** (Momentum: {best_away_form['Away_Momentum']:+.1f} Elo Gain)")
+        write_line(f"Upcoming Match: {best_away_form['Home']} vs. Away")
+        write_line("-" * 30)
+
+    print(f"Analysis summary written successfully to {file_path}")
 
 # Standard Python entry point
 if __name__ == "__main__":
