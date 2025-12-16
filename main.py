@@ -85,6 +85,17 @@ def run_analysis(fixtures_raw: pd.DataFrame, ratings_raw: pd.DataFrame):
         best_away_form
     )
 
+    # --- 5. Write history to File ---
+    today_str = datetime.date.today().strftime("%Y-%m-%d")
+    write_analysis_summary_to_file(
+        fixtures,
+        most_likely,
+        most_momentum_favored,
+        best_home_form,
+        best_away_form,
+        f"data/history/{today_str}.txt"
+    )
+
 
 def print_analysis_summary(
         most_likely: Dict[str, Any],
