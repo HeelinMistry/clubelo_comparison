@@ -37,6 +37,7 @@ jobs:
     - name: ➕ Concatenate Docs into README.md
       run: |
         cat data/TEMPLATE.md > README.md
+        echo "" >> README.md
         cat data/ANALYSIS.md >> README.md
 
     - name: ⬆️ Commit and Push Final Documentation
