@@ -17,7 +17,8 @@ Execute the `main.py` script from the root directory:
 
 ```bash
 python main.py
-```# ⚽ WEEKLY FIXTURE INSIGHTS ⚽
+```
+# ⚽ WEEKLY FIXTURE INSIGHTS ⚽
 
 ***
 
