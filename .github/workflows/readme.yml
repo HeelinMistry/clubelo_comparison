@@ -32,7 +32,6 @@ jobs:
         else
           pip install requests pandas tabulate
         fi
-    # -----------------------------------------------------------------------------------
 
     - name: ➕ Concatenate Docs into README.md
       run: |
