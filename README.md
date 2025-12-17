@@ -17,10 +17,7 @@ Execute the `main.py` script from the root directory:
 
 ```bash
 python main.py
-```
-## 🚀 Live Prediction Analysis Summary
-
-# ⚽ WEEKLY FIXTURE INSIGHTS ⚽
+```# ⚽ WEEKLY FIXTURE INSIGHTS ⚽
 
 ***
 
