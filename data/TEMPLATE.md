@@ -1,4 +1,3 @@
-
 ## 🛠️ Setup and Installation
 
 1.  **Clone the Repository:**
@@ -18,3 +17,4 @@ Execute the `main.py` script from the root directory:
 
 ```bash
 python main.py
+```
