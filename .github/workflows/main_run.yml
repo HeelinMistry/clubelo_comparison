@@ -28,6 +28,8 @@ jobs:
     strategy:
       fail-fast: false
       max-attempts: 3
+      matrix:
+        python-version: ['3.11']
 
     steps:
       - name: ⬇️ Checkout code
@@ -48,7 +50,7 @@ jobs:
             pip install requests pandas tabulate
           fi
 
-  # -------------------------------------------------------------
+      # -------------------------------------------------------------
       # ⏰ DATE CHECK LOGIC
       # Determines if 24 hours have passed since the last successful run.
       # -------------------------------------------------------------
@@ -75,7 +77,7 @@ jobs:
           
           echo "Last Run Time: $LAST_RUN_TIME"
           echo "Time Since Last Run (s): $TIME_DIFF_SECONDS"
-  
+          
           # 5. Set environment variable to control subsequent steps
           if [ "$TIME_DIFF_SECONDS" -ge "$MIN_WAIT_SECONDS" ]; then
               echo "::notice:: Over 24 hours passed. Proceeding with analysis."
@@ -98,7 +100,7 @@ jobs:
         run: |
           # Run generator and pipe to temporary file
           python summary_generator.py > GENERATED_DOCS.md
-      
+          
           # 💡 If the python script fails (e.g., due to API error), 
           # the entire job will restart due to the 'strategy: max-attempts: 3' setting.
 
