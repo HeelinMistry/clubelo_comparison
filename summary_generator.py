@@ -70,7 +70,7 @@ def clean_docstring(doc):
                     name = name.split(' ')[0]
 
                     # Append the formatted line, guaranteeing a new line for each item
-                details.append(f"* **{name}:** {description}")
+                details.append(f"* **{name}:** {description}\n")
             else:
                 # Handle multi-line descriptions (appending to the last item)
                 if details and details[-1].startswith('* '):

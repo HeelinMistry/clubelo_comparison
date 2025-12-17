@@ -74,7 +74,6 @@ def fetch_all_fixtures() -> Optional[str]:
 def fetch_club_history(club_name: str) -> str:
     """
     Fetches the full Elo history for a specific club from its foundation until the present day.
-
     The club name is cleaned to remove spaces for the API endpoint.
 
     Args:

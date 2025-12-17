@@ -55,7 +55,6 @@ def find_most_likely_outcome(df: pd.DataFrame) -> Optional[Dict[str, Any]]:
     """
     Finds the strongest predicted outcome across all fixtures by calculating
     a 'Confidence Score' that weights raw Elo probability with recent momentum.
-
     The score formula is designed to reward outcomes supported by positive momentum
     and penalize draws where momentum heavily favors one side.
 
