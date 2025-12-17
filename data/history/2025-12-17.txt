@@ -4,30 +4,31 @@
 
 --- ⚽ Upcoming Fixtures & Momentum ---
       Date        Home           Away  HomeWin %  Draw %  AwayWin %  Home_Momentum  Away_Momentum  Momentum_Diff
-2025-12-20     Everton        Arsenal       18.8    25.7       55.6           13.3            4.5            8.8
-2025-12-20       Leeds Crystal Palace       30.7    29.2       40.1           16.9            7.1            9.8
-2025-12-20      Wolves      Brentford       27.2    24.7       48.0           -0.9           -4.6            3.7
-2025-12-20    Man City       West Ham       76.8    15.0        8.2           31.4            8.4           22.9
-2025-12-20   Newcastle        Chelsea       39.7    28.0       32.2            1.7            5.8           -4.1
-2025-12-20   Tottenham      Liverpool       29.6    25.1       45.3           11.0           22.0          -11.0
-2025-12-20    Brighton     Sunderland       65.3    20.9       13.8           -1.8           18.8          -20.6
-2025-12-20 Bournemouth        Burnley       55.7    25.4       19.0            0.7           -1.7            2.4
+2025-12-20     Everton        Arsenal       18.7    25.7       55.7           13.3            4.5            8.8
+2025-12-20       Leeds Crystal Palace       30.6    29.0       40.4           16.9            7.1            9.8
+2025-12-20      Wolves      Brentford       27.0    24.8       48.1           -0.9           -4.6            3.7
+2025-12-20    Man City       West Ham       76.7    15.1        8.2           31.4            8.4           22.9
+2025-12-20   Newcastle        Chelsea       39.6    28.0       32.4            1.7            5.8           -4.1
+2025-12-20   Tottenham      Liverpool       29.5    25.0       45.4           11.0           22.0          -11.0
+2025-12-20    Brighton     Sunderland       65.0    21.0       14.0           -1.8           18.8          -20.6
+2025-12-20 Bournemouth        Burnley       56.2    24.9       18.9           13.0           -1.7           14.6
+2025-12-21 Aston Villa     Man United       55.1    24.7       20.2           26.7           15.7           11.1
 
 ======================================================================
       🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 ======================================================================
 Fixture:       **Man City** vs. **West Ham**
 Prediction:    Home WIN: Man City
-Probability:   76.8% (Raw Elo)
+Probability:   76.7% (Raw Elo)
 Form Advantage: **+22.9 Elo** (Largest differential this week)
 ------------------------------
 
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 Fixture:       **Man City** vs. **West Ham**
 Prediction:    Home WIN: Man City
-Probability:   76.8% (Raw Elo)
+Probability:   76.7% (Raw Elo)
 Form Advantage: +31.36 Elo
-Confidence:    79.09 (Maximized)
+Confidence:    78.99 (Maximized)
 ------------------------------
 
 ## ✨ TEAM FORM SPOTLIGHTS

@@ -76,8 +76,8 @@ def run_analysis(fixtures_raw: pd.DataFrame, ratings_raw: pd.DataFrame):
         best_away_form
     )
 
-    # --- 4. Write Summary to File ---
-    write_analysis_summary_to_file(
+    # --- 4. Write markdown for readme ---
+    write_analysis_summary_to_file_markdown(
         fixtures,
         most_likely,
         most_momentum_favored,
@@ -272,6 +272,117 @@ def write_analysis_summary_to_file(
         write_line("-" * 30)
 
     print(f"Analysis summary written successfully to {file_path}")
+
+
+def write_analysis_summary_to_file_markdown(
+        fixtures: pd.DataFrame,
+        most_likely: Dict[str, Any],
+        most_momentum_favored: pd.Series,
+        best_home_form: pd.Series,
+        best_away_form: pd.Series,
+        file_path: str = "data/ANALYSIS.md"
+):
+    """
+    Formats and writes the multi-section summary of the analysis to a file
+    using Markdown formatting suitable for a README.
+    """
+
+    with open(file_path, 'w') as f:
+        def write_line(line):
+            f.write(line + "\n")
+
+        # --- HEADER ---
+        write_line("# ⚽ WEEKLY FIXTURE INSIGHTS ⚽")
+        write_line("\n***\n")
+
+        # --- FIXTURES TABLE ---
+        # Assuming you are using Pandas version 1.0 or newer
+        write_line("## ⚽ Upcoming Fixtures & Momentum")
+        write_line("\n" + fixtures.to_markdown(
+            index=False,
+            # Use the 'floatfmt' argument which is the correct one for the underlying tabulate library
+            floatfmt=".1f"
+        ))
+        write_line("\n***\n")
+
+        # --- 1. MOST MOMENTUM-FAVORED PREDICTION (Converted to Markdown Table) ---
+        write_line("## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)")
+
+        favored_diff = most_momentum_favored['Momentum_Diff']
+
+        if favored_diff >= 0:
+            predicted_winner = most_momentum_favored['Home']
+            raw_prob = most_momentum_favored['HomeWin %']
+            result_str = f"Home WIN: {predicted_winner}"
+        else:
+            predicted_winner = most_momentum_favored['Away']
+            raw_prob = most_momentum_favored['AwayWin %']
+            result_str = f"Away WIN: {predicted_winner}"
+
+        # Write the data as a Markdown Table
+        data = [
+            ("Fixture", f"**{most_momentum_favored['Home']}** vs. **{most_momentum_favored['Away']}**"),
+            ("Prediction", result_str),
+            ("Probability", f"{raw_prob:.1f}% (Raw Elo)"),
+            ("Form Advantage", f"**{favored_diff:+.1f} Elo** (Largest differential this week)")
+        ]
+
+        write_line("| Key | Value |")
+        write_line("| :--- | :--- |")
+        for key, value in data:
+            write_line(f"| {key} | {value} |")
+
+        write_line("\n***\n")
+
+        # --- 2. MOST CONFIDENT PREDICTION (Converted to Markdown Table) ---
+        write_line("## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)")
+
+        outcome = most_likely['Outcome']
+
+        if outcome == 'HomeWin %':
+            result_str = f"Home WIN: {most_likely['Home']}"
+            momentum_for_favored = most_likely['Home_Momentum']
+        elif outcome == 'AwayWin %':
+            result_str = f"Away WIN: {most_likely['Away']}"
+            momentum_for_favored = most_likely['Away_Momentum']
+        else:
+            result_str = "DRAW (Neutral Momentum Favored)"
+            momentum_for_favored = most_likely['Momentum_Diff']
+
+        data = [
+            ("Fixture", f"**{most_likely['Home']}** vs. **{most_likely['Away']}**"),
+            ("Prediction", result_str),
+            ("Probability", f"{most_likely['Probability']:.1f}% (Raw Elo)"),
+            ("Form Advantage", f"{momentum_for_favored:+.2f} Elo"),
+            ("Confidence", f"{most_likely['Confidence_Score']:.2f} (Maximized)")
+        ]
+
+        write_line("| Key | Value |")
+        write_line("| :--- | :--- |")
+        for key, value in data:
+            write_line(f"| {key} | {value} |")
+
+        write_line("\n***\n")
+
+        # --- 3. TEAM FORM SPOTLIGHTS ---
+        write_line("## ✨ TEAM FORM SPOTLIGHTS")
+
+        # BEST HOME FORM
+        write_line("#### **Best Recent Home Form:**")
+        write_line("* **Team:** " +
+                   f"**{best_home_form['Home']}** (Momentum: {best_home_form['Home_Momentum']:+.1f} Elo Gain)")
+        write_line(f"* **Upcoming Match:** Home vs. {best_home_form['Away']}")
+
+        # BEST AWAY FORM
+        write_line("\n#### **Best Recent Away Form:**")
+        write_line("* **Team:** " +
+                   f"**{best_away_form['Away']}** (Momentum: {best_away_form['Away_Momentum']:+.1f} Elo Gain)")
+        write_line(f"* **Upcoming Match:** {best_away_form['Home']} vs. Away")
+
+        write_line("\n***\n")
+
+    print(f"Analysis summary written successfully to {file_path}")
+
 
 # Standard Python entry point
 if __name__ == "__main__":

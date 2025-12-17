@@ -31,7 +31,7 @@ jobs:
         if [ -f requirements.txt ]; then
           pip install -r requirements.txt
         else
-          pip install requests pandas 
+          pip install requests pandas tabulate
         fi
     # -----------------------------------------------------------------------------------
 
@@ -77,7 +77,7 @@ jobs:
         echo "" >> README.md
         echo "## 🚀 Live Prediction Analysis Summary" >> README.md
         echo "" >> README.md
-        cat data/analysis_summary.txt >> README.md
+        cat data/ANALYSIS.md >> README.md
     - name: ⬆️ Commit and Push Final Documentation
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
