@@ -73,7 +73,6 @@ jobs:
     - name: ⬆️ Commit and Push Final Documentation
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: "docs: Auto-update README.md with latest analysis summary"
-        # We need to commit both the final README and the documentation file in 'data/'
+        commit_message: "docs: Auto-update CLUBELO_COMPARISON.md internal documentation"
         files: |
           data/CLUBELO_COMPARISON.md
