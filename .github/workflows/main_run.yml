@@ -98,6 +98,7 @@ jobs:
         id: run_generator
         # Execute the Python script
         run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/src
           # Run generator 
           python main.py
           
