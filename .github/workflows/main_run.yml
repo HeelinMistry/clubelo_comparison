@@ -1,0 +1,121 @@
+name: Auto-Generate Fixture Analysis
+
+on:
+  # 1. Scheduled run: Check every day at 04:00 UTC (adjust to fit your needs)
+  schedule:
+    - cron: '0 4 * * *'
+  # 2. Manual run (for development/testing)
+  workflow_dispatch:
+  # 3. Runs on push (optional, good for testing logic changes)
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'src/**.py'
+      - '*.py'
+      - '.github/workflows/main_run.yml' # Reruns if workflow logic changes
+
+jobs:
+  run_analysis_with_retry:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed for git-auto-commit-action
+
+    # -------------------------------------------------------------
+    # 🚨 RETRY STRATEGY
+    # The entire job will retry up to 3 times if any step fails (e.g., API timeouts).
+    # This is excellent for handling temporary data collection failures.
+    # -------------------------------------------------------------
+    strategy:
+      fail-fast: false
+      max-attempts: 3
+
+    steps:
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Set up Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11' # Ensure this matches your project version
+
+      - name: 📦 Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Check for requirements.txt and install all necessary libraries (requests, pandas, etc.)
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install requests pandas tabulate
+          fi
+
+  # -------------------------------------------------------------
+      # ⏰ DATE CHECK LOGIC
+      # Determines if 24 hours have passed since the last successful run.
+      # -------------------------------------------------------------
+      - name: ⏳ Check Last Run Time
+        id: check_time
+        run: |
+          # 1. Define the log file path (must be committed and tracked)
+          LOG_FILE="data/last_successful_run.log"
+          
+          # 2. Get the current time in Unix timestamp (seconds since epoch)
+          CURRENT_TIME=$(date +%s)
+          
+          # 3. Read the timestamp of the last successful run
+          if [ -f $LOG_FILE ]; then
+              LAST_RUN_TIME=$(cat $LOG_FILE)
+          else
+              # If log file doesn't exist (first run), set time far in the past
+              LAST_RUN_TIME=0
+          fi
+          
+          # 4. Calculate difference in hours (86400 seconds = 24 hours)
+          TIME_DIFF_SECONDS=$((CURRENT_TIME - LAST_RUN_TIME))
+          MIN_WAIT_SECONDS=86400 # 24 hours
+          
+          echo "Last Run Time: $LAST_RUN_TIME"
+          echo "Time Since Last Run (s): $TIME_DIFF_SECONDS"
+  
+          # 5. Set environment variable to control subsequent steps
+          if [ "$TIME_DIFF_SECONDS" -ge "$MIN_WAIT_SECONDS" ]; then
+              echo "::notice:: Over 24 hours passed. Proceeding with analysis."
+              echo "RUN_ANALYSIS=true" >> $GITHUB_ENV
+          else
+              ELAPSED_HOURS=$((TIME_DIFF_SECONDS / 3600))
+              echo "::notice:: Only ${ELAPSED_HOURS} hours passed. Skipping analysis."
+              echo "RUN_ANALYSIS=false" >> $GITHUB_ENV
+          fi
+
+      # -------------------------------------------------------------
+      # 📝 GENERATE ANALYSIS
+      # This entire block only runs if RUN_ANALYSIS is true
+      # -------------------------------------------------------------
+      - name: 📝 Generate New Documentation Content
+        # The 'if' condition makes this step (and subsequent steps) conditional
+        if: env.RUN_ANALYSIS == 'true'
+        id: run_generator
+        # Execute the Python script
+        run: |
+          # Run generator and pipe to temporary file
+          python summary_generator.py > GENERATED_DOCS.md
+      
+          # 💡 If the python script fails (e.g., due to API error), 
+          # the entire job will restart due to the 'strategy: max-attempts: 3' setting.
+
+      # -------------------------------------------------------------
+      # 💾 LOG & COMMIT
+      # Only runs after successful generation and logging of the new run time
+      # -------------------------------------------------------------
+      - name: 💾 Log New Successful Run Time
+        if: success() && env.RUN_ANALYSIS == 'true'
+        run: |
+          # Overwrite the log file with the current Unix timestamp
+          date +%s > data/last_successful_run.log
+
+      - name: ⬆️ Commit and Push Final Documentation
+        if: success() && env.RUN_ANALYSIS == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: Auto-update analysis and log time."
+          files: |
+            data/**
