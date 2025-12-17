@@ -82,7 +82,7 @@ jobs:
           
               # 3. Decision Logic: Only run if TODAY is the TARGET_RUN_DATE or later.
               # This ensures the analysis runs only after the latest set of fixtures has completed.
-              if [[ "$CURRENT_DATE" >= "$TARGET_RUN_DATE" ]]; then
+              if [[ "$CURRENT_DATE" > "$TARGET_RUN_DATE" ]]; then         
                   echo "::notice:: Target date ($TARGET_RUN_DATE) reached. Proceeding with analysis."
                   echo "RUN_ANALYSIS=true" >> $GITHUB_ENV
               else
