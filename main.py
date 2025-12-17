@@ -112,7 +112,7 @@ def print_analysis_summary(
         best_home_form: The fixture row containing the team with the highest Home_Momentum.
         best_away_form: The fixture row containing the team with the highest Away_Momentum.
     """
-    print("\n" + "=" * 70)
+    print("=" * 70)
     print("             ⚽ WEEKLY FIXTURE INSIGHTS ⚽")
     print("=" * 70)
 

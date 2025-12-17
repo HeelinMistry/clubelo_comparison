@@ -21,7 +21,9 @@ TARGET_FUNCTIONS = [
 
 
 def clean_docstring(doc):
-    """Cleans up the docstring for Markdown output."""
+    """Cleans up the docstring for Markdown output, ensuring arguments and returns
+       are listed on separate lines and descriptions are clearly separated by ':'.
+    """
     if not doc:
         return "No documentation available."
 
@@ -30,21 +32,21 @@ def clean_docstring(doc):
     details = []
     capture_details = False
 
-    # 1. Capture the summary until the first blank line or structured keyword
+    # 1. Capture the summary until the first structured keyword
     for line in lines:
         stripped = line.strip()
 
         # Check for structured section keywords (Args/Returns)
         if stripped.startswith('Args:'):
-            details.append("\n**Arguments:**")
+            details.append("\n**Arguments:**\n")
             capture_details = True
-            continue  # Move to the next line
+            continue
         elif stripped.startswith('Returns:'):
-            details.append("\n**Returns:**")
+            details.append("\n**Returns:**\n")
             capture_details = True
-            continue  # Move to the next line
+            continue
 
-        # If we are not capturing structured details yet:
+            # If we are not capturing structured details yet:
         if not capture_details:
             if not stripped:
                 # Stop capturing the summary on the first blank line
@@ -54,19 +56,45 @@ def clean_docstring(doc):
 
         # 2. Capture the details (Arguments/Returns)
         elif capture_details and stripped:
-            # Simple list formatting for details
-            details.append(f"* {stripped.lstrip('- ')}")
+
+            # Identify the argument/return item, removing leading markers (e.g., *, -)
+            clean_item = stripped.lstrip('*- ').strip()
+
+            if ':' in clean_item:
+                # Split by the first colon only
+                parts = clean_item.split(':', 1)
+
+                # Format the output as: * **Name:** Description
+                name = parts[0].strip()
+                description = parts[1].strip()
+
+                # Check if the name part contains a type annotation (e.g., club_name: str)
+                # If so, clean it up for the final output
+                if ' ' in name:
+                    name = name.split(' ')[0]  # Assumes type annotation is separated by space
+
+                # Append the formatted line, forcing each into a new list item
+                details.append(f"*{name}: {description} \n")
+            else:
+                # Handle multi-line descriptions that don't contain a colon (continuation)
+                # Append to the previous item if possible, or treat as a standalone line
+
+                if details and details[-1].startswith('* '):
+                    # Append description text to the last item
+                    details[-1] = details[-1] + ' ' + clean_item
+                else:
+                    # Treat as a new item if no previous item exists or formatting is off
+                    details.append(f"{clean_item}")
 
     summary = ' '.join(summary_lines)
 
+    # Join all details with a space or newline for final output
     return f"{summary}\n{' '.join(details)}"
 
 
 def generate_readme_section(functions):
     """Generates a Markdown section detailing key functions."""
     output = """
-# ⚽ Club Elo Predictor
-    
 A Python-based project to fetch live fixture data from the Club Elo API, calculate the traditional 1X2 match probabilities (Home Win, Draw, Away Win), and identify the single most likely outcome across a set of fixtures.\n\n
 """
     output += "## 🚀 Core Logic and Functions\n"
