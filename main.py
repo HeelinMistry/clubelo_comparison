@@ -36,6 +36,22 @@ def fetch_data() -> Tuple[pd.DataFrame, pd.DataFrame]:
     return fixtures_df, ratings_df
 
 
+def save_next_fixture_date(fixtures_df: pd.DataFrame, file_path: str = "data/next_fixture_date.log"):
+    """Saves the date of the earliest upcoming fixture to a file."""
+
+    if fixtures_df.empty:
+        # If no fixtures are found, you might want to exit or set a future date.
+        print("Warning: No upcoming fixtures found to set next run date.")
+        return
+
+        # Assuming 'Date' column is clean and sorted/sortable
+    next_date = fixtures_df['Date'].min()
+
+    with open(file_path, 'w') as f:
+        # Save the date in YYYY-MM-DD format
+        print(f"Next fixture: {next_date} written successfully to {file_path}")
+        f.write(next_date)
+
 def run_analysis(fixtures_raw: pd.DataFrame, ratings_raw: pd.DataFrame):
     """
     Runs the full analysis pipeline: filtering, processing, finding key insights, and printing the summary.
@@ -95,6 +111,9 @@ def run_analysis(fixtures_raw: pd.DataFrame, ratings_raw: pd.DataFrame):
         best_away_form,
         f"data/history/{today_str}.txt"
     )
+
+    # --- 6. Save next fixture date ---
+    save_next_fixture_date(fixtures)
 
 
 def print_analysis_summary(
