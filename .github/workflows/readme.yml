@@ -1,4 +1,4 @@
-name: Auto-Generate Function Docs
+name: Auto-Generate Readme Analysis
 
 on:
   push:
