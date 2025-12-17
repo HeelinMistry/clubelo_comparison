@@ -71,10 +71,26 @@ jobs:
       # Note: This simply removes the file from the runner environment before the final commit.
       # It doesn't affect the repository history.
 
-    - name: ⬆️ Commit and Push Changes to Documentation File
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        # Commit message clearly states the change was automated
-        commit_message: "docs: Auto-update CLUBELO_COMPARISON.md with function summary"
-        # Commit the new documentation file
-        files: CLUBELO_COMPARISON.md
+    - name: ➕ Concatenate Docs into README.md
+      run: |
+        # 1. Start with the TEMPLATE.md content
+        cat data/TEMPLATE.md > README.md
+        
+        # 2. Add a separator or space (optional, but good practice)
+        echo "" >> README.md
+        echo "## 🚀 Live Prediction Analysis Summary" >> README.md
+        echo "" >> README.md
+        
+        # 3. Append the dynamically generated content from the data folder
+        cat data/analysis_summary.txt >> README.md
+        
+        # --- END NEW CONCATENATION STEP ---
+
+        - name: ⬆️ Commit and Push Final Documentation
+          uses: stefanzweifel/git-auto-commit-action@v5
+          with:
+            commit_message: "docs: Auto-update README.md with latest analysis summary"
+            # We need to commit both the final README and the documentation file in 'data/'
+            files: |
+              README.md
+              data/CLUBELO_COMPARISON.md
