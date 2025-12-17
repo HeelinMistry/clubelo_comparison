@@ -98,8 +98,9 @@ jobs:
         id: run_generator
         # Execute the Python script
         run: |
-          # Run generator and pipe to temporary file
-          python summary_generator.py > GENERATED_DOCS.md
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+          # Run generator 
+          python summary_generator.py
           
           # 💡 If the python script fails (e.g., due to API error), 
           # the entire job will restart due to the 'strategy: max-attempts: 3' setting.
