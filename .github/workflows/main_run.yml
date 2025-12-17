@@ -27,9 +27,9 @@ jobs:
     # -------------------------------------------------------------
     strategy:
       fail-fast: false
-      max-attempts: 3
-      matrix:
-        python-version: ['3.11']
+      matrix: # <--- as indented incorrectly relative to 'strategy'
+        os: [ ubuntu-latest ]
+        python-version: [ '3.11' ]
 
     steps:
       - name: ⬇️ Checkout code
