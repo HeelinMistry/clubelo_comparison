@@ -2,7 +2,7 @@ name: Auto-Generate Function Docs
 
 on:
   push:
-    branches: [ "main", "dev" ]
+    branches: [ "main" ]
     paths:
       - 'src/**.py' # Only run when source files or the generator script change
       - 'summary_generator.py'
@@ -24,15 +24,6 @@ jobs:
       with:
         python-version: '3.11' # Ensure this matches your project version
 
-    - name: 📦 Install Python Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        # Check for requirements.txt and install all necessary libraries (requests, pandas, etc.)
-        if [ -f requirements.txt ]; then
-          pip install -r requirements.txt
-        else
-          pip install requests pandas tabulate
-        fi
     # -----------------------------------------------------------------------------------
 
     - name: 📝 Generate New Documentation Content
@@ -71,18 +62,10 @@ jobs:
       # Note: This simply removes the file from the runner environment before the final commit.
       # It doesn't affect the repository history.
 
-    - name: ➕ Concatenate Docs into README.md
-      run: |
-        cat data/TEMPLATE.md > README.md
-        echo "" >> README.md
-        echo "## 🚀 Live Prediction Analysis Summary" >> README.md
-        echo "" >> README.md
-        cat data/ANALYSIS.md >> README.md
     - name: ⬆️ Commit and Push Final Documentation
       uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: "docs: Auto-update README.md with latest analysis summary"
         # We need to commit both the final README and the documentation file in 'data/'
         files: |
-          README.md
           data/CLUBELO_COMPARISON.md

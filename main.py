@@ -296,11 +296,9 @@ def write_analysis_summary_to_file_markdown(
         write_line("\n***\n")
 
         # --- FIXTURES TABLE ---
-        # Assuming you are using Pandas version 1.0 or newer
         write_line("## ⚽ Upcoming Fixtures & Momentum")
         write_line("\n" + fixtures.to_markdown(
             index=False,
-            # Use the 'floatfmt' argument which is the correct one for the underlying tabulate library
             floatfmt=".1f"
         ))
         write_line("\n***\n")
