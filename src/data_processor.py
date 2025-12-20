@@ -47,6 +47,9 @@ def get_momentum(club_name: str, lookback: int = 5) -> Optional[float]:
     """
     Calculates the Elo change (Momentum) over the last 'lookback' actual games.
 
+    Args:
+        club_name: The name of the club to fetch history for.
+        lookback: The number of games to look back to calculate momentum (default is 5).
     Returns:
         float: The total Elo change, rounded to 2 decimal places.
         None: On critical network failure (to signal unreliability and trigger job retry).
