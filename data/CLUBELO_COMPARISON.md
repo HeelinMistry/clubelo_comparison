@@ -64,15 +64,13 @@ Converts the raw fixtures DataFrame into a clean, calculated DataFrame by filter
 
 ---
 #### `get_momentum`
-Calculates the Elo change (Momentum) over the last 'lookback' actual games by comparing the current Elo to the Elo before the Nth game back. Future Elo projections are filtered out.
-
-**Arguments:**
- * **club_name:** The name of the club to fetch history for.
- * **lookback:** The number of games to look back to calculate momentum (default is 5).
- 
+Calculates the Elo change (Momentum) over the last 'lookback' actual games.
 
 **Returns:**
- * The total Elo change over the lookback period, rounded to 2 decimal places. Returns 0.0 if data is unavailable or an error occurs.
+ * **float:** The total Elo change, rounded to 2 decimal places.
+ * **None:** On critical network failure (to signal unreliability and trigger job retry).
+ * **0.0:** If data is available but insufficient (e.g., empty DataFrame, not enough games).
+
 
 ---
 
