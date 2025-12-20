@@ -1,4 +1,5 @@
 import datetime
+import sys
 from io import StringIO
 from typing import Tuple, Any, Dict
 
@@ -65,8 +66,8 @@ def run_analysis(fixtures_raw: pd.DataFrame, ratings_raw: pd.DataFrame):
     fixtures = process_fixtures(fixtures)
 
     if fixtures.empty:
-        print("No upcoming Level 1 (top-tier) fixtures found. Exiting.")
-        return
+        print("No fixtures to analyze. Exiting successfully.")
+        sys.exit(0)  # Exit successfully if no fixtures found
 
     print("\n--- ⚽ Upcoming Fixtures & Momentum ---")
     print(fixtures.to_string(index=False, float_format="%.1f"))
@@ -114,6 +115,7 @@ def run_analysis(fixtures_raw: pd.DataFrame, ratings_raw: pd.DataFrame):
 
     # --- 6. Save next fixture date ---
     save_next_fixture_date(fixtures)
+    sys.exit(0)
 
 
 def print_analysis_summary(
@@ -406,6 +408,17 @@ if __name__ == "__main__":
     fixtures_df, ratings_df = fetch_data()
     # Only run analysis if data was successfully fetched
     if not fixtures_df.empty and not ratings_df.empty:
-        run_analysis(fixtures_df, ratings_df)
+        try:
+            run_analysis(fixtures_df, ratings_df)
+        except ValueError as e:
+            # Catch the specific error raised for high failure rate
+            print(f"Workflow Failure triggered")
+            sys.exit(1)  # <-- This triggers the GitHub Actions retry (max-attempts: 3)
+
+        except Exception as e:
+            # Catch any other unexpected critical errors
+            print(f"FATAL UNEXPECTED ERROR")
+            sys.exit(1)  # Also triggers retry
     else:
         print("\n--- Failed to fetch required data. Cannot run analysis. ---")
+        sys.exit(1)
