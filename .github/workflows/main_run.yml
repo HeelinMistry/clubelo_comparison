@@ -64,16 +64,15 @@ jobs:
           FIXTURE_DATE_FILE="data/next_fixture_date.log"
           
           # 2. Check if the next fixture date file exists (meaning the main script ran successfully before)
+          # Note: Added quotes around $FIXTURE_DATE_FILE to prevent syntax errors if variable is empty
           if [ -f "$FIXTURE_DATE_FILE" ]; then
               # Read the date of the NEXT upcoming fixture (e.g., 2025-12-20)
-              NEXT_FIXTURE_DATE=$(cat $FIXTURE_DATE_FILE | xargs)
+              NEXT_FIXTURE_DATE=$(cat "$FIXTURE_DATE_FILE" | xargs)
           
               # Get today's date in YYYY-MM-DD format
               CURRENT_DATE=$(date +%Y-%m-%d)
           
               # Calculate the target run date: 24 hours AFTER the next fixture date
-              # Note: We assume the analysis is needed *after* the fixture date has passed.
-              # Use GNU date command for date arithmetic (common on GitHub runners)
               TARGET_RUN_DATE=$(date -d "$NEXT_FIXTURE_DATE + 1 day" +%Y-%m-%d)
           
               echo "Next Fixture Date: $NEXT_FIXTURE_DATE"
@@ -81,7 +80,7 @@ jobs:
               echo "Current Date: $CURRENT_DATE"
           
               # 3. Decision Logic: Only run if TODAY is the TARGET_RUN_DATE or later.
-              # This ensures the analysis runs only after the latest set of fixtures has completed.
+              # FIX: Changed > to >= to include the target run date.
               if [[ "$CURRENT_DATE" >= "$TARGET_RUN_DATE" ]]; then         
                   echo "::notice:: Target date ($TARGET_RUN_DATE) reached. Proceeding with analysis."
                   echo "RUN_ANALYSIS=true" >> $GITHUB_ENV
