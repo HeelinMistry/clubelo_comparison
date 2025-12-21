@@ -108,28 +108,29 @@ jobs:
       # 📝 GENERATE ANALYSIS (WITH STEP-LEVEL RETRY)
       # This entire block only runs if RUN_ANALYSIS is true
       # -------------------------------------------------------------
-      - name: 📝 Generate New Documentation Content (Max 10 Retries)
+      - name: 📝 Generate New Documentation Content (Max 5 Retries)
         if: env.RUN_ANALYSIS == 'true'
         id: run_generator
         shell: bash
         run: |
           export PYTHONPATH=$PYTHONPATH:$(pwd)/src
           
-          MAX_RETRIES=10
+          MAX_RETRIES=5
           RETRY_COUNT=0
           
           while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
               echo "Attempt $((RETRY_COUNT + 1)) of $MAX_RETRIES to run main.py..."
-              
-              # Run generator and check its exit code ($?)
               if python main.py; then
                   echo "Python script succeeded."
-                  exit 0 # Exit the step successfully
+                  exit 0 # Success
               else
                   RETRY_COUNT=$((RETRY_COUNT + 1))
                   if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-                      echo "Python script failed. Retrying in 3600 seconds..."
-                      sleep 3600 # Wait before next attempt
+                      # Calculate sleep duration: 30 seconds * attempt number
+                      # Wait times: 30s, 60s, 90s, 120s
+                      SLEEP_DURATION=$((RETRY_COUNT * 30))
+                      echo "Python script failed. Retrying in ${SLEEP_DURATION} seconds..."
+                      sleep $SLEEP_DURATION # Wait time increases with each failure
                   fi
               fi
           done
