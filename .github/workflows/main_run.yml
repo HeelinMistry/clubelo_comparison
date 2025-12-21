@@ -64,37 +64,38 @@ jobs:
           FIXTURE_DATE_FILE="data/next_fixture_date.log"
           
           # 2. Check if the next fixture date file exists (meaning the main script ran successfully before)
-          # Note: Added quotes around $FIXTURE_DATE_FILE to prevent syntax errors if variable is empty
           if [ -f $FIXTURE_DATE_FILE ]; then
               # Read the date of the NEXT upcoming fixture (e.g., 2025-12-20)
-              NEXT_FIXTURE_DATE=$(cat "$FIXTURE_DATE_FILE" | xargs)
+              NEXT_FIXTURE_DATE=$(cat $FIXTURE_DATE_FILE | xargs)
           
               # Get today's date in YYYY-MM-DD format
               CURRENT_DATE=$(date +%Y-%m-%d)
           
               # Calculate the target run date: 24 hours AFTER the next fixture date
+              # Note: We assume the analysis is needed *after* the fixture date has passed.
+              # Use GNU date command for date arithmetic (common on GitHub runners)
               TARGET_RUN_DATE=$(date -d "$NEXT_FIXTURE_DATE + 1 day" +%Y-%m-%d)
           
               echo "Next Fixture Date: $NEXT_FIXTURE_DATE"
               echo "Target Run Date (24h after fixture): $TARGET_RUN_DATE"
               echo "Current Date: $CURRENT_DATE"
           
-              # 1. Convert YYYY-MM-DD date strings to Unix Timestamps (seconds since epoch)
-              CURRENT_TIMESTAMP=$(date -d "$CURRENT_DATE" +%s)
-              TARGET_TIMESTAMP=$(date -d "$TARGET_RUN_DATE" +%s)
-              
-              echo "Current Timestamp: $CURRENT_TIMESTAMP"
-              echo "Target Timestamp: $TARGET_TIMESTAMP"
-              
-              # 2. Decision Logic: Use numerical comparison for robustness.
-              # (If Current Time is Greater Than or Equal To Target Time)
-              if (( CURRENT_TIMESTAMP >= TARGET_TIMESTAMP )); then         
+              # 3. Decision Logic: Only run if TODAY is the TARGET_RUN_DATE or later.
+              # This ensures the analysis runs only after the latest set of fixtures has completed.
+              if [[ "$CURRENT_DATE" >= "$TARGET_RUN_DATE" ]]; then         
                   echo "::notice:: Target date ($TARGET_RUN_DATE) reached. Proceeding with analysis."
                   echo "RUN_ANALYSIS=true" >> $GITHUB_ENV
               else
                   echo "::notice:: Fixtures are not complete or next fixture is far away. Skipping run."
                   echo "RUN_ANALYSIS=false" >> $GITHUB_ENV
               fi
+          
+          else
+              # If the file doesn't exist, this is the very first run or a file cleanup was missed.
+              echo "::warning:: Next fixture date file not found. Assuming first run. Proceeding with analysis."
+              # This ensures the script runs the first time to generate the file.
+              echo "RUN_ANALYSIS=true" >> $GITHUB_ENV
+          fi
 
       # -------------------------------------------------------------
       # 📝 GENERATE ANALYSIS
