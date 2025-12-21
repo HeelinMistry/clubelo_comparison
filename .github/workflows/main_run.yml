@@ -64,7 +64,7 @@ jobs:
           FIXTURE_DATE_FILE="data/next_fixture_date.log"
           
           # 2. Check if the next fixture date file exists (meaning the main script ran successfully before)
-          if [ -f $FIXTURE_DATE_FILE ]; then
+          if [ -f "$FIXTURE_DATE_FILE" ]; then
               # Read the date of the NEXT upcoming fixture (e.g., 2025-12-20)
               NEXT_FIXTURE_DATE=$(cat $FIXTURE_DATE_FILE | xargs)
           
