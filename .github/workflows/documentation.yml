@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
     paths:
       - 'src/**.py' # Only run when source files or the generator script change
+      - 'data/**'
       - 'summary_generator.py'
   workflow_dispatch: # Allows manual trigger
 
