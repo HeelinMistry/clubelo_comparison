@@ -65,7 +65,7 @@ jobs:
           
           # 2. Check if the next fixture date file exists (meaning the main script ran successfully before)
           # Note: Added quotes around $FIXTURE_DATE_FILE to prevent syntax errors if variable is empty
-          if [ -f "$FIXTURE_DATE_FILE" ]; then
+          if [ -f $FIXTURE_DATE_FILE ]; then
               # Read the date of the NEXT upcoming fixture (e.g., 2025-12-20)
               NEXT_FIXTURE_DATE=$(cat "$FIXTURE_DATE_FILE" | xargs)
           
@@ -88,7 +88,7 @@ jobs:
               
               # 2. Decision Logic: Use numerical comparison for robustness.
               # (If Current Time is Greater Than or Equal To Target Time)
-              if (( CURRENT_TIMESTAMP = TARGET_TIMESTAMP )); then         
+              if (( CURRENT_TIMESTAMP >= TARGET_TIMESTAMP )); then         
                   echo "::notice:: Target date ($TARGET_RUN_DATE) reached. Proceeding with analysis."
                   echo "RUN_ANALYSIS=true" >> $GITHUB_ENV
               else
