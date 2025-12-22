@@ -142,16 +142,25 @@ jobs:
       # 💾 LOG & COMMIT
       # Only runs after successful generation and logging of the new run time
       # -------------------------------------------------------------
-      - name: 💾 Log New Successful Run Time
+      - name: ➕ Concatenate Docs into README.md
         if: success() && env.RUN_ANALYSIS == 'true'
         run: |
-          # Overwrite the log file with the current Unix timestamp
-          date +%s > data/last_successful_run.log
+          # 1. Start with the TEMPLATE.md content
+          cat TEMPLATE.md > README.md
+          
+          # 2. Add separator (optional)
+          echo "" >> README.md
+          echo "## 🚀 Live Prediction Analysis Summary" >> README.md
+          echo "" >> README.md
+          
+          # 3. Append the dynamically generated content
+          cat data/CLUBELO_COMPARISON.MD >> README.md
 
-      - name: ⬆️ Commit and Push Final Documentation
-        if: success() && env.RUN_ANALYSIS == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "docs: Auto-update analysis and log time."
-          files: |
-            data/**
+          - name: ⬆️ Commit and Push Final Documentation
+            if: success() && env.RUN_ANALYSIS == 'true'
+            uses: stefanzweifel/git-auto-commit-action@v5
+            with:
+              commit_message: "docs: Auto-update analysis and log time."
+              files: |
+                README.md 
+                data/** 
