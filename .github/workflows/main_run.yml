@@ -146,7 +146,7 @@ jobs:
         if: success() && env.RUN_ANALYSIS == 'true'
         run: |
           # 1. Start with the TEMPLATE.md content
-          cat TEMPLATE.md > README.md
+          cat data/TEMPLATE.md > README.md
           
           # 2. Add separator (optional)
           echo "" >> README.md
