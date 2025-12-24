@@ -20,107 +20,56 @@ python main.py
 ```
 ## 🚀 Live Prediction Analysis Summary
 
-# ClubElo Comparison Tool - Function Documentation
+# ⚽ WEEKLY FIXTURE INSIGHTS ⚽
 
-This document provides a detailed, auto-generated summary of the core Python functions used in the project, extracted directly from docstrings.
+***
 
+## ⚽ Upcoming Fixtures & Momentum
 
-A Python-based project to fetch live fixture data from the Club Elo API, calculate the traditional 1X2 match probabilities (Home Win, Draw, Away Win), and identify the single most likely outcome across a set of fixtures.
+| Date       | Home           | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:---------------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2025-12-26 | Man United     | Newcastle   |        40.5 |     26.8 |        32.7 |             2.2 |            -2.1 |             4.3 |
+| 2025-12-27 | Chelsea        | Aston Villa |        41.4 |     28.9 |        29.6 |             7.9 |            20.5 |           -12.6 |
+| 2025-12-27 | Brentford      | Bournemouth |        45.5 |     26.8 |        27.6 |            13.0 |             6.9 |             6.1 |
+| 2025-12-27 | Liverpool      | Wolves      |        81.0 |     12.3 |         6.6 |            32.2 |             0.5 |            31.7 |
+| 2025-12-27 | Arsenal        | Brighton    |        71.7 |     17.8 |        10.5 |            19.1 |            -3.0 |            22.1 |
+| 2025-12-27 | West Ham       | Fulham      |        37.2 |     28.4 |        34.5 |             0.7 |            23.2 |           -22.5 |
+| 2025-12-27 | Forest         | Man City    |        20.9 |     24.2 |        54.9 |            20.7 |            31.9 |           -11.3 |
+| 2025-12-27 | Burnley        | Everton     |        30.5 |     32.4 |        37.1 |             6.1 |            -1.9 |             8.0 |
+| 2025-12-28 | Sunderland     | Leeds       |        34.2 |     30.5 |        35.2 |            27.1 |            29.1 |            -1.9 |
+| 2025-12-28 | Crystal Palace | Tottenham   |        45.6 |     27.9 |        26.5 |           -17.0 |            -5.0 |           -12.0 |
 
+***
 
-## 🚀 Core Logic and Functions
+## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
+| Key | Value |
+| :--- | :--- |
+| Fixture | **Liverpool** vs. **Wolves** |
+| Prediction | Home WIN: Liverpool |
+| Probability | 81.0% (Raw Elo) |
+| Form Advantage | **+31.7 Elo** (Largest differential this week) |
 
-### ⚙️ Data Fetching
-#### `fetch_all_fixtures`
-Fetches the raw CSV data for all upcoming fixtures, including 1X2 probabilities.
+***
 
-**Returns:**
- * The raw CSV data as a string if successful, otherwise None.
+## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
+| Key | Value |
+| :--- | :--- |
+| Fixture | **Liverpool** vs. **Wolves** |
+| Prediction | Home WIN: Liverpool |
+| Probability | 81.0% (Raw Elo) |
+| Form Advantage | +32.18 Elo |
+| Confidence | 84.17 (Maximized) |
 
----
-#### `fetch_ratings_by_date`
-Fetches the raw CSV data for all club ratings on a specific date.
+***
 
-**Arguments:**
- * **date_str:** The date in "YYYY-MM-DD" format.
- 
+## ✨ TEAM FORM SPOTLIGHTS
+#### **Best Recent Home Form:**
+* **Team:** **Liverpool** (Momentum: +32.2 Elo Gain)
+* **Upcoming Match:** Home vs. Wolves
 
-**Returns:**
- * The raw CSV data as a string if successful, otherwise None.
+#### **Best Recent Away Form:**
+* **Team:** **Man City** (Momentum: +31.9 Elo Gain)
+* **Upcoming Match:** Forest vs. Away
 
----
-#### `fetch_club_history`
-Fetches the full Elo history for a specific club from its foundation until the present day. The club name is cleaned to remove spaces for the API endpoint.
+***
 
-**Arguments:**
- * **club_name:** The name of the club (e.g., 'Man City').
- 
-
-**Returns:**
- * The raw CSV history data as a string. Returns an empty string on failure.
-
----
-
-### ⚙️ Data Processing
-#### `filter_level_1`
-Filters fixtures_df to include only matches where *both* the Home and Away teams are classified as Level 1 (top tier) in their respective countries.
-
-**Arguments:**
- * **fixtures_df:** DataFrame of upcoming fixtures.
- * **ratings_df:** DataFrame containing current Elo ratings and the 'Level' column.
- 
-
-**Returns:**
- * Filtered DataFrame containing only Level 1 league fixtures.
-
----
-#### `process_fixtures`
-Converts the raw fixtures DataFrame into a clean, calculated DataFrame by filtering for English teams, calculating 1X2 probabilities, and calculating momentum scores.
-
-**Arguments:**
- * **df:** The raw DataFrame containing fixtures and Elo data (including GD columns).
- 
-
-**Returns:**
- * A pandas DataFrame with upcoming fixtures, probabilities, and momentum scores, sorted by date. Returns an empty DataFrame if no English fixtures are found.
-
----
-#### `get_momentum`
-Calculates the Elo change (Momentum) over the last 'lookback' actual games.
-
-**Arguments:**
- * **club_name:** The name of the club to fetch history for.
- * **lookback:** The number of games to look back to calculate momentum (default is 5).
- 
-
-**Returns:**
- * **float:** The total Elo change, rounded to 2 decimal places.
- * **None:** On critical network failure (to signal unreliability and trigger job retry).
- * **0.0:** If data is available but insufficient (e.g., empty DataFrame, not enough games).
-
-
----
-
-### ⚙️ Prediction Logic
-#### `find_most_likely_outcome`
-Finds the strongest predicted outcome across all fixtures by calculating a 'Confidence Score' that weights raw Elo probability with recent momentum. The score formula is designed to reward outcomes supported by positive momentum and penalize draws where momentum heavily favors one side.
-
-**Arguments:**
- * **df:** DataFrame containing processed fixtures, probabilities, and momentum data.
- 
-
-**Returns:**
- * A dictionary representing the single predicted outcome with the highest Confidence Score, or None if the DataFrame is empty.
-
----
-#### `find_max_momentum_match`
-Identifies the fixture with the largest absolute Momentum_Diff, indicating the biggest form vs. slump mismatch. This is used for highlighting high-volatility betting opportunities.
-
-**Arguments:**
- * **df:** DataFrame containing fixture data, including the 'Momentum_Diff' column.
- 
-
-**Returns:**
- * The pandas Series representing the row of the match with the highest absolute momentum differential, or None if the DataFrame is empty.
-
----
