@@ -154,7 +154,7 @@ jobs:
           echo "" >> README.md
           
           # 3. Append the dynamically generated content
-          cat data/CLUBELO_COMPARISON.MD >> README.md
+          cat data/CLUBELO_COMPARISON.md >> README.md
 
           - name: ⬆️ Commit and Push Final Documentation
             if: success() && env.RUN_ANALYSIS == 'true'
