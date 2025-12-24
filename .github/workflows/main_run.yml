@@ -154,7 +154,7 @@ jobs:
           echo "" >> README.md
           
           # 3. Append the dynamically generated content
-          cat data/CLUBELO_COMPARISON.md >> README.md
+          cat data/ANALYSIS.md >> README.md
 
       - name: ⬆️ Commit and Push Final Documentation
         if: success() && env.RUN_ANALYSIS == 'true'
@@ -163,4 +163,4 @@ jobs:
           commit_message: "docs: Auto-update analysis and log time."
           files: |
             README.md 
-            data/** 
+            data/**
