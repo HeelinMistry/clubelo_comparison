@@ -156,11 +156,11 @@ jobs:
           # 3. Append the dynamically generated content
           cat data/CLUBELO_COMPARISON.md >> README.md
 
-          - name: ⬆️ Commit and Push Final Documentation
-            if: success() && env.RUN_ANALYSIS == 'true'
-            uses: stefanzweifel/git-auto-commit-action@v5
-            with:
-              commit_message: "docs: Auto-update analysis and log time."
-              files: |
-                README.md 
-                data/** 
+      - name: ⬆️ Commit and Push Final Documentation
+        if: success() && env.RUN_ANALYSIS == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: Auto-update analysis and log time."
+          files: |
+            README.md 
+            data/** 
