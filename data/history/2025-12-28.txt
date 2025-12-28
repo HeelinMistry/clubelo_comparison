@@ -1,0 +1,41 @@
+======================================================================
+             ⚽ WEEKLY FIXTURE INSIGHTS ⚽
+======================================================================
+
+--- ⚽ Upcoming Fixtures & Momentum ---
+      Date           Home        Away  HomeWin %  Draw %  AwayWin %  Home_Momentum  Away_Momentum  Momentum_Diff
+2025-12-28     Sunderland       Leeds       34.3    30.6       35.1           27.1           29.1           -1.9
+2025-12-28 Crystal Palace   Tottenham       45.6    27.9       26.4          -17.0           -5.0          -12.0
+2025-12-30        Chelsea Bournemouth       55.9    25.0       19.1            7.9            6.9            1.0
+2025-12-30     Man United      Wolves       69.3    18.2       12.4            2.2            0.5            1.8
+2025-12-30        Arsenal Aston Villa       58.6    23.6       17.8           19.1           20.5           -1.4
+2025-12-30       West Ham    Brighton       32.5    27.8       39.6            0.7           -3.0            3.7
+2025-12-30         Forest     Everton       39.5    31.1       29.4           20.7           -1.9           22.5
+2025-12-30        Burnley   Newcastle       25.8    26.7       47.5            6.1           -2.1            8.2
+
+======================================================================
+      🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
+======================================================================
+Fixture:       **Forest** vs. **Everton**
+Prediction:    Home WIN: Forest
+Probability:   39.5% (Raw Elo)
+Form Advantage: **+22.5 Elo** (Largest differential this week)
+------------------------------
+
+## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
+Fixture:       **Man United** vs. **Wolves**
+Prediction:    Home WIN: Man United
+Probability:   69.3% (Raw Elo)
+Form Advantage: +2.21 Elo
+Confidence:    69.48 (Maximized)
+------------------------------
+
+## ✨ TEAM FORM SPOTLIGHTS
+**Best Recent Home Form:**
+Team:          **Sunderland** (Momentum: +27.1 Elo Gain)
+Upcoming Match: Home vs. Leeds
+
+**Best Recent Away Form:**
+Team:          **Leeds** (Momentum: +29.1 Elo Gain)
+Upcoming Match: Sunderland vs. Away
+------------------------------
