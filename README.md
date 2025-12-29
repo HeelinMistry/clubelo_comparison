@@ -26,16 +26,14 @@ python main.py
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home           | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:---------------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2025-12-28 | Sunderland     | Leeds       |        34.3 |     30.6 |        35.1 |            27.1 |            29.1 |            -1.9 |
-| 2025-12-28 | Crystal Palace | Tottenham   |        45.6 |     27.9 |        26.4 |           -17.0 |            -5.0 |           -12.0 |
-| 2025-12-30 | Chelsea        | Bournemouth |        55.9 |     25.0 |        19.1 |             7.9 |             6.9 |             1.0 |
-| 2025-12-30 | Man United     | Wolves      |        69.3 |     18.2 |        12.4 |             2.2 |             0.5 |             1.8 |
-| 2025-12-30 | Arsenal        | Aston Villa |        58.6 |     23.6 |        17.8 |            19.1 |            20.5 |            -1.4 |
-| 2025-12-30 | West Ham       | Brighton    |        32.5 |     27.8 |        39.6 |             0.7 |            -3.0 |             3.7 |
-| 2025-12-30 | Forest         | Everton     |        39.5 |     31.1 |        29.4 |            20.7 |            -1.9 |            22.5 |
-| 2025-12-30 | Burnley        | Newcastle   |        25.8 |     26.7 |        47.5 |             6.1 |            -2.1 |             8.2 |
+| Date       | Home       | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:-----------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2025-12-30 | Chelsea    | Bournemouth |        56.2 |     24.7 |        19.1 |             5.1 |            -6.0 |            11.1 |
+| 2025-12-30 | Man United | Wolves      |        69.8 |     18.0 |        12.2 |             7.3 |            -3.3 |            10.6 |
+| 2025-12-30 | Arsenal    | Aston Villa |        57.4 |     24.3 |        18.3 |            19.3 |            27.4 |            -8.2 |
+| 2025-12-30 | West Ham   | Brighton    |        31.7 |     28.2 |        40.2 |            -9.6 |            -7.7 |            -1.9 |
+| 2025-12-30 | Forest     | Everton     |        38.8 |     31.2 |        29.9 |            14.1 |            -5.4 |            19.5 |
+| 2025-12-30 | Burnley    | Newcastle   |        27.1 |     26.3 |        46.6 |             5.1 |           -11.8 |            16.8 |
 
 ***
 
@@ -44,8 +42,8 @@ python main.py
 | :--- | :--- |
 | Fixture | **Forest** vs. **Everton** |
 | Prediction | Home WIN: Forest |
-| Probability | 39.5% (Raw Elo) |
-| Form Advantage | **+22.5 Elo** (Largest differential this week) |
+| Probability | 38.8% (Raw Elo) |
+| Form Advantage | **+19.5 Elo** (Largest differential this week) |
 
 ***
 
@@ -54,20 +52,20 @@ python main.py
 | :--- | :--- |
 | Fixture | **Man United** vs. **Wolves** |
 | Prediction | Home WIN: Man United |
-| Probability | 69.3% (Raw Elo) |
-| Form Advantage | +2.21 Elo |
-| Confidence | 69.48 (Maximized) |
+| Probability | 69.8% (Raw Elo) |
+| Form Advantage | +7.31 Elo |
+| Confidence | 70.86 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Sunderland** (Momentum: +27.1 Elo Gain)
-* **Upcoming Match:** Home vs. Leeds
+* **Team:** **Arsenal** (Momentum: +19.3 Elo Gain)
+* **Upcoming Match:** Home vs. Aston Villa
 
 #### **Best Recent Away Form:**
-* **Team:** **Leeds** (Momentum: +29.1 Elo Gain)
-* **Upcoming Match:** Sunderland vs. Away
+* **Team:** **Aston Villa** (Momentum: +27.4 Elo Gain)
+* **Upcoming Match:** Arsenal vs. Away
 
 ***
 
