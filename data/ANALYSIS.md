@@ -4,45 +4,42 @@
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home      | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:----------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-01-31 | Chelsea   | West Ham    |        68.1 |     19.2 |        12.7 |            23.6 |            25.7 |            -2.1 |
-| 2026-01-31 | Leeds     | Arsenal     |        14.5 |     21.4 |        64.1 |             9.1 |            -4.7 |            13.8 |
-| 2026-01-31 | Liverpool | Newcastle   |        52.0 |     24.8 |        23.1 |            -2.0 |            -4.0 |             2.0 |
-| 2026-01-31 | Wolves    | Bournemouth |        28.6 |     25.0 |        46.4 |             6.6 |            17.9 |           -11.3 |
-| 2026-01-31 | Brighton  | Everton     |        44.2 |     29.0 |        26.8 |            -5.3 |            12.7 |           -18.0 |
+| Date       | Home       | Away    |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:-----------|:--------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2026-02-02 | Sunderland | Burnley |        38.9 |     32.1 |        29.0 |             4.3 |            14.6 |           -10.3 |
+| 2026-02-06 | Leeds      | Forest  |        39.7 |     29.2 |        31.2 |            16.1 |            23.5 |            -7.4 |
 
 ***
 
 ## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Brighton** vs. **Everton** |
-| Prediction | Away WIN: Everton |
-| Probability | 26.8% (Raw Elo) |
-| Form Advantage | **-18.0 Elo** (Largest differential this week) |
+| Fixture | **Sunderland** vs. **Burnley** |
+| Prediction | Away WIN: Burnley |
+| Probability | 29.0% (Raw Elo) |
+| Form Advantage | **-10.3 Elo** (Largest differential this week) |
 
 ***
 
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Chelsea** vs. **West Ham** |
-| Prediction | Home WIN: Chelsea |
-| Probability | 68.1% (Raw Elo) |
-| Form Advantage | +23.65 Elo |
-| Confidence | 67.89 (Maximized) |
+| Fixture | **Leeds** vs. **Forest** |
+| Prediction | Home WIN: Leeds |
+| Probability | 39.7% (Raw Elo) |
+| Form Advantage | +16.05 Elo |
+| Confidence | 38.96 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Chelsea** (Momentum: +23.6 Elo Gain)
-* **Upcoming Match:** Home vs. West Ham
+* **Team:** **Leeds** (Momentum: +16.1 Elo Gain)
+* **Upcoming Match:** Home vs. Forest
 
 #### **Best Recent Away Form:**
-* **Team:** **West Ham** (Momentum: +25.7 Elo Gain)
-* **Upcoming Match:** Chelsea vs. Away
+* **Team:** **Forest** (Momentum: +23.5 Elo Gain)
+* **Upcoming Match:** Leeds vs. Away
 
 ***
 
