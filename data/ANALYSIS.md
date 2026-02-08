@@ -6,45 +6,39 @@
 
 | Date       | Home           | Away           |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
 |:-----------|:---------------|:---------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-02-07 | Man United     | Tottenham      |        48.0 |     26.5 |        25.5 |            27.6 |            18.9 |             8.8 |
-| 2026-02-07 | Wolves         | Chelsea        |        16.2 |     22.5 |        61.3 |            -2.8 |            28.1 |           -30.9 |
-| 2026-02-07 | Arsenal        | Sunderland     |        81.1 |     14.1 |         4.8 |            -0.5 |            11.8 |           -12.2 |
-| 2026-02-07 | Fulham         | Everton        |        40.9 |     30.6 |        28.4 |             9.5 |             6.9 |             2.6 |
-| 2026-02-07 | Newcastle      | Brentford      |        46.4 |     26.8 |        26.8 |            -8.7 |             3.6 |           -12.3 |
-| 2026-02-07 | Burnley        | West Ham       |        38.3 |     29.0 |        32.6 |            -3.7 |            13.7 |           -17.4 |
-| 2026-02-07 | Bournemouth    | Aston Villa    |        31.9 |     29.0 |        39.0 |            25.9 |            13.5 |            12.3 |
-| 2026-02-08 | Brighton       | Crystal Palace |        46.0 |     28.9 |        25.1 |            -1.9 |            -0.7 |            -1.2 |
-| 2026-02-08 | Liverpool      | Man City       |        41.9 |     28.4 |        29.7 |             8.3 |             9.9 |            -1.7 |
-| 2026-02-10 | Chelsea        | Leeds          |        63.2 |     20.4 |        16.4 |            28.1 |             4.5 |            23.6 |
-| 2026-02-10 | Everton        | Bournemouth    |        40.2 |     30.1 |        29.8 |             6.9 |            25.9 |           -19.0 |
-| 2026-02-10 | West Ham       | Man United     |        28.7 |     23.6 |        47.7 |            13.7 |            27.6 |           -13.9 |
+| 2026-02-08 | Liverpool      | Man City       |        42.0 |     28.4 |        29.6 |             8.3 |             9.9 |            -1.7 |
+| 2026-02-08 | Brighton       | Crystal Palace |        46.2 |     28.7 |        25.1 |            -1.9 |            -0.7 |            -1.2 |
+| 2026-02-10 | Chelsea        | Leeds          |        61.9 |     21.0 |        17.0 |            28.1 |            16.1 |            12.0 |
+| 2026-02-10 | Everton        | Bournemouth    |        40.3 |     30.1 |        29.6 |             6.9 |            25.9 |           -19.0 |
+| 2026-02-10 | West Ham       | Man United     |        28.7 |     23.6 |        47.6 |            13.7 |            27.6 |           -13.9 |
 | 2026-02-10 | Tottenham      | Newcastle      |        37.4 |     27.8 |        34.8 |            18.9 |            -8.7 |            27.6 |
-| 2026-02-11 | Forest         | Wolves         |        56.0 |     25.4 |        18.6 |            16.5 |            -2.8 |            19.3 |
-| 2026-02-11 | Aston Villa    | Brighton       |        54.1 |     25.7 |        20.2 |            13.5 |            -1.9 |            15.5 |
-| 2026-02-11 | Sunderland     | Liverpool      |        16.5 |     23.8 |        59.7 |            11.8 |             8.3 |             3.5 |
-| 2026-02-11 | Man City       | Fulham         |        62.0 |     21.0 |        16.9 |             9.9 |             9.5 |             0.4 |
-| 2026-02-11 | Crystal Palace | Burnley        |        52.4 |     28.0 |        19.6 |            -0.7 |            -3.7 |             3.0 |
+| 2026-02-11 | Aston Villa    | Brighton       |        54.2 |     25.6 |        20.2 |            13.5 |            -1.9 |            15.5 |
+| 2026-02-11 | Sunderland     | Liverpool      |        16.6 |     23.8 |        59.6 |            11.8 |             8.3 |             3.5 |
+| 2026-02-11 | Man City       | Fulham         |        62.2 |     21.0 |        16.9 |             9.9 |             9.5 |             0.4 |
+| 2026-02-11 | Forest         | Wolves         |        54.6 |     26.3 |        19.0 |            15.4 |            -2.8 |            18.2 |
+| 2026-02-11 | Crystal Palace | Burnley        |        52.4 |     27.9 |        19.6 |            -0.7 |            -3.7 |             2.9 |
+| 2026-02-12 | Brentford      | Arsenal        |        19.3 |     23.6 |        57.0 |             3.6 |            -0.5 |             4.1 |
 
 ***
 
 ## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Wolves** vs. **Chelsea** |
-| Prediction | Away WIN: Chelsea |
-| Probability | 61.3% (Raw Elo) |
-| Form Advantage | **-30.9 Elo** (Largest differential this week) |
+| Fixture | **Tottenham** vs. **Newcastle** |
+| Prediction | Home WIN: Tottenham |
+| Probability | 37.4% (Raw Elo) |
+| Form Advantage | **+27.6 Elo** (Largest differential this week) |
 
 ***
 
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Arsenal** vs. **Sunderland** |
-| Prediction | Home WIN: Arsenal |
-| Probability | 81.1% (Raw Elo) |
-| Form Advantage | -0.47 Elo |
-| Confidence | 79.88 (Maximized) |
+| Fixture | **Chelsea** vs. **Leeds** |
+| Prediction | Home WIN: Chelsea |
+| Probability | 61.9% (Raw Elo) |
+| Form Advantage | +28.14 Elo |
+| Confidence | 63.10 (Maximized) |
 
 ***
 
@@ -54,8 +48,8 @@
 * **Upcoming Match:** Home vs. Leeds
 
 #### **Best Recent Away Form:**
-* **Team:** **Chelsea** (Momentum: +28.1 Elo Gain)
-* **Upcoming Match:** Wolves vs. Away
+* **Team:** **Man United** (Momentum: +27.6 Elo Gain)
+* **Upcoming Match:** West Ham vs. Away
 
 ***
 
