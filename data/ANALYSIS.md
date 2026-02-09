@@ -4,20 +4,18 @@
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home           | Away           |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:---------------|:---------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-02-08 | Liverpool      | Man City       |        42.0 |     28.4 |        29.6 |             8.3 |             9.9 |            -1.7 |
-| 2026-02-08 | Brighton       | Crystal Palace |        46.2 |     28.7 |        25.1 |            -1.9 |            -0.7 |            -1.2 |
-| 2026-02-10 | Chelsea        | Leeds          |        61.9 |     21.0 |        17.0 |            28.1 |            16.1 |            12.0 |
-| 2026-02-10 | Everton        | Bournemouth    |        40.3 |     30.1 |        29.6 |             6.9 |            25.9 |           -19.0 |
-| 2026-02-10 | West Ham       | Man United     |        28.7 |     23.6 |        47.6 |            13.7 |            27.6 |           -13.9 |
-| 2026-02-10 | Tottenham      | Newcastle      |        37.4 |     27.8 |        34.8 |            18.9 |            -8.7 |            27.6 |
-| 2026-02-11 | Aston Villa    | Brighton       |        54.2 |     25.6 |        20.2 |            13.5 |            -1.9 |            15.5 |
-| 2026-02-11 | Sunderland     | Liverpool      |        16.6 |     23.8 |        59.6 |            11.8 |             8.3 |             3.5 |
-| 2026-02-11 | Man City       | Fulham         |        62.2 |     21.0 |        16.9 |             9.9 |             9.5 |             0.4 |
-| 2026-02-11 | Forest         | Wolves         |        54.6 |     26.3 |        19.0 |            15.4 |            -2.8 |            18.2 |
-| 2026-02-11 | Crystal Palace | Burnley        |        52.4 |     27.9 |        19.6 |            -0.7 |            -3.7 |             2.9 |
-| 2026-02-12 | Brentford      | Arsenal        |        19.3 |     23.6 |        57.0 |             3.6 |            -0.5 |             4.1 |
+| Date       | Home           | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:---------------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2026-02-10 | Chelsea        | Leeds       |        62.2 |     20.9 |        16.9 |            34.1 |            16.1 |            18.0 |
+| 2026-02-10 | Everton        | Bournemouth |        41.0 |     30.2 |        28.8 |            17.2 |            28.2 |           -10.9 |
+| 2026-02-10 | West Ham       | Man United  |        28.8 |     23.8 |        47.4 |            26.8 |            36.5 |            -9.7 |
+| 2026-02-10 | Tottenham      | Newcastle   |        37.2 |     27.8 |        34.9 |            12.1 |           -17.8 |            29.8 |
+| 2026-02-11 | Aston Villa    | Brighton    |        54.1 |     26.0 |        19.9 |             8.2 |           -11.6 |            19.9 |
+| 2026-02-11 | Sunderland     | Liverpool   |        16.9 |     23.7 |        59.4 |            10.7 |             0.2 |            10.5 |
+| 2026-02-11 | Man City       | Fulham      |        64.6 |     20.0 |        15.5 |            20.0 |             1.2 |            18.8 |
+| 2026-02-11 | Forest         | Wolves      |        54.8 |     26.1 |        19.1 |            15.4 |            -6.7 |            22.1 |
+| 2026-02-11 | Crystal Palace | Burnley     |        54.3 |     26.9 |        18.8 |            11.0 |           -14.8 |            25.7 |
+| 2026-02-12 | Brentford      | Arsenal     |        19.9 |     23.8 |        56.3 |            14.7 |             2.6 |            12.1 |
 
 ***
 
@@ -26,29 +24,29 @@
 | :--- | :--- |
 | Fixture | **Tottenham** vs. **Newcastle** |
 | Prediction | Home WIN: Tottenham |
-| Probability | 37.4% (Raw Elo) |
-| Form Advantage | **+27.6 Elo** (Largest differential this week) |
+| Probability | 37.2% (Raw Elo) |
+| Form Advantage | **+29.8 Elo** (Largest differential this week) |
 
 ***
 
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Chelsea** vs. **Leeds** |
-| Prediction | Home WIN: Chelsea |
-| Probability | 61.9% (Raw Elo) |
-| Form Advantage | +28.14 Elo |
-| Confidence | 63.10 (Maximized) |
+| Fixture | **Man City** vs. **Fulham** |
+| Prediction | Home WIN: Man City |
+| Probability | 64.6% (Raw Elo) |
+| Form Advantage | +19.99 Elo |
+| Confidence | 66.48 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Chelsea** (Momentum: +28.1 Elo Gain)
+* **Team:** **Chelsea** (Momentum: +34.1 Elo Gain)
 * **Upcoming Match:** Home vs. Leeds
 
 #### **Best Recent Away Form:**
-* **Team:** **Man United** (Momentum: +27.6 Elo Gain)
+* **Team:** **Man United** (Momentum: +36.5 Elo Gain)
 * **Upcoming Match:** West Ham vs. Away
 
 ***
