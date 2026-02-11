@@ -26,28 +26,24 @@ python main.py
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home           | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:---------------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-02-10 | Chelsea        | Leeds       |        62.2 |     20.9 |        16.9 |            34.1 |            16.1 |            18.0 |
-| 2026-02-10 | Everton        | Bournemouth |        41.0 |     30.2 |        28.8 |            17.2 |            28.2 |           -10.9 |
-| 2026-02-10 | West Ham       | Man United  |        28.8 |     23.8 |        47.4 |            26.8 |            36.5 |            -9.7 |
-| 2026-02-10 | Tottenham      | Newcastle   |        37.2 |     27.8 |        34.9 |            12.1 |           -17.8 |            29.8 |
-| 2026-02-11 | Aston Villa    | Brighton    |        54.1 |     26.0 |        19.9 |             8.2 |           -11.6 |            19.9 |
-| 2026-02-11 | Sunderland     | Liverpool   |        16.9 |     23.7 |        59.4 |            10.7 |             0.2 |            10.5 |
-| 2026-02-11 | Man City       | Fulham      |        64.6 |     20.0 |        15.5 |            20.0 |             1.2 |            18.8 |
-| 2026-02-11 | Forest         | Wolves      |        54.8 |     26.1 |        19.1 |            15.4 |            -6.7 |            22.1 |
-| 2026-02-11 | Crystal Palace | Burnley     |        54.3 |     26.9 |        18.8 |            11.0 |           -14.8 |            25.7 |
-| 2026-02-12 | Brentford      | Arsenal     |        19.9 |     23.8 |        56.3 |            14.7 |             2.6 |            12.1 |
+| Date       | Home           | Away      |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:---------------|:----------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2026-02-11 | Aston Villa    | Brighton  |        54.1 |     25.9 |        20.0 |             8.2 |           -11.6 |            19.9 |
+| 2026-02-11 | Sunderland     | Liverpool |        16.8 |     23.7 |        59.4 |            10.7 |             0.2 |            10.5 |
+| 2026-02-11 | Man City       | Fulham    |        64.5 |     20.0 |        15.5 |            20.0 |             1.2 |            18.8 |
+| 2026-02-11 | Forest         | Wolves    |        54.8 |     26.1 |        19.1 |            15.4 |            -6.7 |            22.1 |
+| 2026-02-11 | Crystal Palace | Burnley   |        54.2 |     27.0 |        18.8 |            11.0 |           -14.8 |            25.7 |
+| 2026-02-12 | Brentford      | Arsenal   |        19.8 |     23.8 |        56.4 |            14.7 |             2.6 |            12.1 |
 
 ***
 
 ## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Tottenham** vs. **Newcastle** |
-| Prediction | Home WIN: Tottenham |
-| Probability | 37.2% (Raw Elo) |
-| Form Advantage | **+29.8 Elo** (Largest differential this week) |
+| Fixture | **Crystal Palace** vs. **Burnley** |
+| Prediction | Home WIN: Crystal Palace |
+| Probability | 54.2% (Raw Elo) |
+| Form Advantage | **+25.7 Elo** (Largest differential this week) |
 
 ***
 
@@ -56,20 +52,20 @@ python main.py
 | :--- | :--- |
 | Fixture | **Man City** vs. **Fulham** |
 | Prediction | Home WIN: Man City |
-| Probability | 64.6% (Raw Elo) |
+| Probability | 64.5% (Raw Elo) |
 | Form Advantage | +19.99 Elo |
-| Confidence | 66.48 (Maximized) |
+| Confidence | 66.38 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Chelsea** (Momentum: +34.1 Elo Gain)
-* **Upcoming Match:** Home vs. Leeds
+* **Team:** **Man City** (Momentum: +20.0 Elo Gain)
+* **Upcoming Match:** Home vs. Fulham
 
 #### **Best Recent Away Form:**
-* **Team:** **Man United** (Momentum: +36.5 Elo Gain)
-* **Upcoming Match:** West Ham vs. Away
+* **Team:** **Arsenal** (Momentum: +2.6 Elo Gain)
+* **Upcoming Match:** Brentford vs. Away
 
 ***
 
