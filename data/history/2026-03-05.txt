@@ -1,0 +1,34 @@
+======================================================================
+             ⚽ WEEKLY FIXTURE INSIGHTS ⚽
+======================================================================
+
+--- ⚽ Upcoming Fixtures & Momentum ---
+      Date      Home           Away  HomeWin %  Draw %  AwayWin %  Home_Momentum  Away_Momentum  Momentum_Diff
+2026-03-05 Tottenham Crystal Palace       41.0    29.5       29.4           -9.9            2.9          -12.8
+
+======================================================================
+      🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
+======================================================================
+Fixture:       **Tottenham** vs. **Crystal Palace**
+Prediction:    Away WIN: Crystal Palace
+Probability:   29.4% (Raw Elo)
+Form Advantage: **-12.8 Elo** (Largest differential this week)
+------------------------------
+
+## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
+Fixture:       **Tottenham** vs. **Crystal Palace**
+Prediction:    Home WIN: Tottenham
+Probability:   41.0% (Raw Elo)
+Form Advantage: -9.89 Elo
+Confidence:    39.72 (Maximized)
+------------------------------
+
+## ✨ TEAM FORM SPOTLIGHTS
+**Best Recent Home Form:**
+Team:          **Tottenham** (Momentum: -9.9 Elo Gain)
+Upcoming Match: Home vs. Crystal Palace
+
+**Best Recent Away Form:**
+Team:          **Crystal Palace** (Momentum: +2.9 Elo Gain)
+Upcoming Match: Tottenham vs. Away
+------------------------------
