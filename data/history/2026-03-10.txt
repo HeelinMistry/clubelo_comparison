@@ -1,0 +1,38 @@
+======================================================================
+             ⚽ WEEKLY FIXTURE INSIGHTS ⚽
+======================================================================
+
+--- ⚽ Upcoming Fixtures & Momentum ---
+      Date       Home        Away  HomeWin %  Draw %  AwayWin %  Home_Momentum  Away_Momentum  Momentum_Diff
+2026-03-14    Chelsea   Newcastle       48.1    26.0       25.9            5.2           -6.5           11.8
+2026-03-14 Sunderland    Brighton       26.8    27.7       45.6            7.3           15.9           -8.7
+2026-03-14    Arsenal     Everton       68.4    20.4       11.1           14.0            9.4            4.6
+2026-03-14   West Ham    Man City       16.6    21.8       61.6            8.0            2.7            5.3
+2026-03-14    Burnley Bournemouth       25.0    26.6       48.4           -4.8           -7.2            2.3
+
+======================================================================
+      🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
+======================================================================
+Fixture:       **Chelsea** vs. **Newcastle**
+Prediction:    Home WIN: Chelsea
+Probability:   48.1% (Raw Elo)
+Form Advantage: **+11.8 Elo** (Largest differential this week)
+------------------------------
+
+## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
+Fixture:       **Arsenal** vs. **Everton**
+Prediction:    Home WIN: Arsenal
+Probability:   68.4% (Raw Elo)
+Form Advantage: +13.97 Elo
+Confidence:    68.86 (Maximized)
+------------------------------
+
+## ✨ TEAM FORM SPOTLIGHTS
+**Best Recent Home Form:**
+Team:          **Arsenal** (Momentum: +14.0 Elo Gain)
+Upcoming Match: Home vs. Everton
+
+**Best Recent Away Form:**
+Team:          **Brighton** (Momentum: +15.9 Elo Gain)
+Upcoming Match: Sunderland vs. Away
+------------------------------

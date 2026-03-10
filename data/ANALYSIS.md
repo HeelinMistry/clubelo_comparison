@@ -4,41 +4,45 @@
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home      | Away           |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:----------|:---------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-03-05 | Tottenham | Crystal Palace |        41.0 |     29.5 |        29.4 |            -9.9 |             2.9 |           -12.8 |
+| Date       | Home       | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:-----------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2026-03-14 | Chelsea    | Newcastle   |        48.1 |     26.0 |        25.9 |             5.2 |            -6.5 |            11.8 |
+| 2026-03-14 | Sunderland | Brighton    |        26.8 |     27.7 |        45.6 |             7.3 |            15.9 |            -8.7 |
+| 2026-03-14 | Arsenal    | Everton     |        68.4 |     20.4 |        11.1 |            14.0 |             9.4 |             4.6 |
+| 2026-03-14 | West Ham   | Man City    |        16.6 |     21.8 |        61.6 |             8.0 |             2.7 |             5.3 |
+| 2026-03-14 | Burnley    | Bournemouth |        25.0 |     26.6 |        48.4 |            -4.8 |            -7.2 |             2.3 |
 
 ***
 
 ## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Tottenham** vs. **Crystal Palace** |
-| Prediction | Away WIN: Crystal Palace |
-| Probability | 29.4% (Raw Elo) |
-| Form Advantage | **-12.8 Elo** (Largest differential this week) |
+| Fixture | **Chelsea** vs. **Newcastle** |
+| Prediction | Home WIN: Chelsea |
+| Probability | 48.1% (Raw Elo) |
+| Form Advantage | **+11.8 Elo** (Largest differential this week) |
 
 ***
 
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Tottenham** vs. **Crystal Palace** |
-| Prediction | Home WIN: Tottenham |
-| Probability | 41.0% (Raw Elo) |
-| Form Advantage | -9.89 Elo |
-| Confidence | 39.72 (Maximized) |
+| Fixture | **Arsenal** vs. **Everton** |
+| Prediction | Home WIN: Arsenal |
+| Probability | 68.4% (Raw Elo) |
+| Form Advantage | +13.97 Elo |
+| Confidence | 68.86 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Tottenham** (Momentum: -9.9 Elo Gain)
-* **Upcoming Match:** Home vs. Crystal Palace
+* **Team:** **Arsenal** (Momentum: +14.0 Elo Gain)
+* **Upcoming Match:** Home vs. Everton
 
 #### **Best Recent Away Form:**
-* **Team:** **Crystal Palace** (Momentum: +2.9 Elo Gain)
-* **Upcoming Match:** Tottenham vs. Away
+* **Team:** **Brighton** (Momentum: +15.9 Elo Gain)
+* **Upcoming Match:** Sunderland vs. Away
 
 ***
 
