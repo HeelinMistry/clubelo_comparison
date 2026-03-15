@@ -26,45 +26,45 @@ python main.py
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home       | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:-----------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-03-14 | Chelsea    | Newcastle   |        48.1 |     26.0 |        25.9 |             5.2 |            -6.5 |            11.8 |
-| 2026-03-14 | Sunderland | Brighton    |        26.8 |     27.7 |        45.6 |             7.3 |            15.9 |            -8.7 |
-| 2026-03-14 | Arsenal    | Everton     |        68.4 |     20.4 |        11.1 |            14.0 |             9.4 |             4.6 |
-| 2026-03-14 | West Ham   | Man City    |        16.6 |     21.8 |        61.6 |             8.0 |             2.7 |             5.3 |
-| 2026-03-14 | Burnley    | Bournemouth |        25.0 |     26.6 |        48.4 |            -4.8 |            -7.2 |             2.3 |
+| Date       | Home           | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:---------------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2026-03-15 | Man United     | Aston Villa |        38.8 |     28.6 |        32.6 |           -17.0 |           -45.3 |            28.3 |
+| 2026-03-15 | Liverpool      | Tottenham   |        63.4 |     20.4 |        16.2 |           -27.0 |           -43.5 |            16.5 |
+| 2026-03-15 | Forest         | Fulham      |        37.2 |     29.4 |        33.4 |           -23.8 |           -18.4 |            -5.4 |
+| 2026-03-15 | Crystal Palace | Leeds       |        42.9 |     29.8 |        27.4 |            -9.4 |           -30.1 |            20.6 |
+| 2026-03-16 | Brentford      | Wolves      |        58.1 |     23.8 |        18.1 |            -8.1 |            18.1 |           -26.2 |
 
 ***
 
 ## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Chelsea** vs. **Newcastle** |
-| Prediction | Home WIN: Chelsea |
-| Probability | 48.1% (Raw Elo) |
-| Form Advantage | **+11.8 Elo** (Largest differential this week) |
+| Fixture | **Man United** vs. **Aston Villa** |
+| Prediction | Home WIN: Man United |
+| Probability | 38.8% (Raw Elo) |
+| Form Advantage | **+28.3 Elo** (Largest differential this week) |
 
 ***
 
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Arsenal** vs. **Everton** |
-| Prediction | Home WIN: Arsenal |
-| Probability | 68.4% (Raw Elo) |
-| Form Advantage | +13.97 Elo |
-| Confidence | 68.86 (Maximized) |
+| Fixture | **Liverpool** vs. **Tottenham** |
+| Prediction | Home WIN: Liverpool |
+| Probability | 63.4% (Raw Elo) |
+| Form Advantage | -27.01 Elo |
+| Confidence | 65.05 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Arsenal** (Momentum: +14.0 Elo Gain)
-* **Upcoming Match:** Home vs. Everton
+* **Team:** **Brentford** (Momentum: -8.1 Elo Gain)
+* **Upcoming Match:** Home vs. Wolves
 
 #### **Best Recent Away Form:**
-* **Team:** **Brighton** (Momentum: +15.9 Elo Gain)
-* **Upcoming Match:** Sunderland vs. Away
+* **Team:** **Wolves** (Momentum: +18.1 Elo Gain)
+* **Upcoming Match:** Brentford vs. Away
 
 ***
 
