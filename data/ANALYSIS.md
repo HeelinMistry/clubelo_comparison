@@ -6,40 +6,43 @@
 
 | Date       | Home        | Away       |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
 |:-----------|:------------|:-----------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-03-16 | Brentford   | Wolves     |        58.1 |     23.8 |        18.1 |            -8.1 |            18.1 |           -26.2 |
-| 2026-03-20 | Bournemouth | Man United |        35.4 |     27.9 |        36.7 |           -20.1 |           -17.0 |            -3.1 |
+| 2026-03-20 | Bournemouth | Man United |        34.2 |     27.0 |        38.8 |           -18.2 |           -11.4 |            -6.8 |
+| 2026-03-21 | Everton     | Chelsea    |        31.7 |     30.6 |        37.7 |           -11.9 |           -21.1 |             9.2 |
+| 2026-03-21 | Leeds       | Brentford  |        33.1 |     28.4 |        38.6 |           -24.0 |            -8.1 |           -15.9 |
+| 2026-03-21 | Fulham      | Burnley    |        53.4 |     26.7 |        19.9 |           -25.2 |           -17.4 |            -7.8 |
+| 2026-03-21 | Brighton    | Liverpool  |        30.7 |     27.5 |        41.8 |           -12.5 |           -36.9 |            24.4 |
 
 ***
 
 ## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Brentford** vs. **Wolves** |
-| Prediction | Away WIN: Wolves |
-| Probability | 18.1% (Raw Elo) |
-| Form Advantage | **-26.2 Elo** (Largest differential this week) |
+| Fixture | **Brighton** vs. **Liverpool** |
+| Prediction | Home WIN: Brighton |
+| Probability | 30.7% (Raw Elo) |
+| Form Advantage | **+24.4 Elo** (Largest differential this week) |
 
 ***
 
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Brentford** vs. **Wolves** |
-| Prediction | Home WIN: Brentford |
-| Probability | 58.1% (Raw Elo) |
-| Form Advantage | -8.11 Elo |
-| Confidence | 55.48 (Maximized) |
+| Fixture | **Fulham** vs. **Burnley** |
+| Prediction | Home WIN: Fulham |
+| Probability | 53.4% (Raw Elo) |
+| Form Advantage | -25.22 Elo |
+| Confidence | 52.62 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Brentford** (Momentum: -8.1 Elo Gain)
-* **Upcoming Match:** Home vs. Wolves
+* **Team:** **Everton** (Momentum: -11.9 Elo Gain)
+* **Upcoming Match:** Home vs. Chelsea
 
 #### **Best Recent Away Form:**
-* **Team:** **Wolves** (Momentum: +18.1 Elo Gain)
-* **Upcoming Match:** Brentford vs. Away
+* **Team:** **Brentford** (Momentum: -8.1 Elo Gain)
+* **Upcoming Match:** Leeds vs. Away
 
 ***
 
