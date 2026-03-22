@@ -1,0 +1,36 @@
+======================================================================
+             ⚽ WEEKLY FIXTURE INSIGHTS ⚽
+======================================================================
+
+--- ⚽ Upcoming Fixtures & Momentum ---
+      Date        Home       Away  HomeWin %  Draw %  AwayWin %  Home_Momentum  Away_Momentum  Momentum_Diff
+2026-03-22   Newcastle Sunderland       60.2    22.9       16.8           -6.0          -10.0            4.0
+2026-03-22 Aston Villa   West Ham       56.3    25.1       18.6           -7.1            0.4           -7.6
+2026-03-22   Tottenham     Forest       40.3    29.0       30.7            0.3           -7.9            8.2
+
+======================================================================
+      🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
+======================================================================
+Fixture:       **Tottenham** vs. **Forest**
+Prediction:    Home WIN: Tottenham
+Probability:   40.3% (Raw Elo)
+Form Advantage: **+8.2 Elo** (Largest differential this week)
+------------------------------
+
+## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
+Fixture:       **Newcastle** vs. **Sunderland**
+Prediction:    Home WIN: Newcastle
+Probability:   60.2% (Raw Elo)
+Form Advantage: -5.99 Elo
+Confidence:    60.60 (Maximized)
+------------------------------
+
+## ✨ TEAM FORM SPOTLIGHTS
+**Best Recent Home Form:**
+Team:          **Tottenham** (Momentum: +0.3 Elo Gain)
+Upcoming Match: Home vs. Forest
+
+**Best Recent Away Form:**
+Team:          **West Ham** (Momentum: +0.4 Elo Gain)
+Upcoming Match: Aston Villa vs. Away
+------------------------------
