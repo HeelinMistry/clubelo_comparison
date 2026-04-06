@@ -26,43 +26,41 @@ python main.py
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home        | Away       |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:------------|:-----------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-03-22 | Newcastle   | Sunderland |        60.2 |     22.9 |        16.8 |            -6.0 |           -10.0 |             4.0 |
-| 2026-03-22 | Aston Villa | West Ham   |        56.3 |     25.1 |        18.6 |            -7.1 |             0.4 |            -7.6 |
-| 2026-03-22 | Tottenham   | Forest     |        40.3 |     29.0 |        30.7 |             0.3 |            -7.9 |             8.2 |
+| Date       | Home     | Away   |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:---------|:-------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2026-04-10 | West Ham | Wolves |        45.1 |     27.8 |        27.1 |            -2.7 |             0.4 |            -3.1 |
 
 ***
 
 ## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Tottenham** vs. **Forest** |
-| Prediction | Home WIN: Tottenham |
-| Probability | 40.3% (Raw Elo) |
-| Form Advantage | **+8.2 Elo** (Largest differential this week) |
+| Fixture | **West Ham** vs. **Wolves** |
+| Prediction | Away WIN: Wolves |
+| Probability | 27.1% (Raw Elo) |
+| Form Advantage | **-3.1 Elo** (Largest differential this week) |
 
 ***
 
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Newcastle** vs. **Sunderland** |
-| Prediction | Home WIN: Newcastle |
-| Probability | 60.2% (Raw Elo) |
-| Form Advantage | -5.99 Elo |
-| Confidence | 60.60 (Maximized) |
+| Fixture | **West Ham** vs. **Wolves** |
+| Prediction | Home WIN: West Ham |
+| Probability | 45.1% (Raw Elo) |
+| Form Advantage | -2.66 Elo |
+| Confidence | 44.80 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Tottenham** (Momentum: +0.3 Elo Gain)
-* **Upcoming Match:** Home vs. Forest
+* **Team:** **West Ham** (Momentum: -2.7 Elo Gain)
+* **Upcoming Match:** Home vs. Wolves
 
 #### **Best Recent Away Form:**
-* **Team:** **West Ham** (Momentum: +0.4 Elo Gain)
-* **Upcoming Match:** Aston Villa vs. Away
+* **Team:** **Wolves** (Momentum: +0.4 Elo Gain)
+* **Upcoming Match:** West Ham vs. Away
 
 ***
 
