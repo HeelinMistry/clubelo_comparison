@@ -28,10 +28,6 @@ python main.py
 
 | Date       | Home           | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
 |:-----------|:---------------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-04-11 | Brentford      | Everton     |        39.7 |     30.4 |        29.9 |             6.1 |            22.7 |           -16.6 |
-| 2026-04-11 | Liverpool      | Fulham      |        55.1 |     25.6 |        19.3 |            -9.6 |            13.4 |           -23.0 |
-| 2026-04-11 | Arsenal        | Bournemouth |        71.9 |     18.0 |        10.1 |             9.1 |             7.8 |             1.4 |
-| 2026-04-11 | Burnley        | Brighton    |        22.3 |     27.0 |        50.7 |             0.8 |            16.7 |           -15.9 |
 | 2026-04-12 | Chelsea        | Man City    |        33.2 |     28.3 |        38.4 |            -8.6 |             6.0 |           -14.6 |
 | 2026-04-12 | Sunderland     | Tottenham   |        34.4 |     29.8 |        35.8 |            20.2 |            -8.6 |            28.7 |
 | 2026-04-12 | Forest         | Aston Villa |        29.3 |     27.9 |        42.7 |            31.4 |            21.8 |             9.6 |
@@ -53,11 +49,11 @@ python main.py
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Arsenal** vs. **Bournemouth** |
-| Prediction | Home WIN: Arsenal |
-| Probability | 71.9% (Raw Elo) |
-| Form Advantage | +9.14 Elo |
-| Confidence | 72.04 (Maximized) |
+| Fixture | **Man United** vs. **Leeds** |
+| Prediction | Home WIN: Man United |
+| Probability | 55.2% (Raw Elo) |
+| Form Advantage | +6.37 Elo |
+| Confidence | 55.04 (Maximized) |
 
 ***
 
@@ -67,8 +63,8 @@ python main.py
 * **Upcoming Match:** Home vs. Aston Villa
 
 #### **Best Recent Away Form:**
-* **Team:** **Everton** (Momentum: +22.7 Elo Gain)
-* **Upcoming Match:** Brentford vs. Away
+* **Team:** **Aston Villa** (Momentum: +21.8 Elo Gain)
+* **Upcoming Match:** Forest vs. Away
 
 ***
 
