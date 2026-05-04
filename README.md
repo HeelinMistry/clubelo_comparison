@@ -26,13 +26,10 @@ python main.py
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home        | Away           |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:------------|:---------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-05-03 | Aston Villa | Tottenham      |        57.0 |     24.4 |        18.5 |            -0.3 |            14.3 |           -14.6 |
-| 2026-05-03 | Man United  | Liverpool      |        35.3 |     28.6 |        36.0 |            19.6 |            18.4 |             1.2 |
-| 2026-05-03 | Bournemouth | Crystal Palace |        44.5 |     28.7 |        26.7 |            11.2 |             1.1 |            10.2 |
-| 2026-05-04 | Chelsea     | Forest         |        42.4 |     29.2 |        28.4 |           -15.7 |            39.6 |           -55.4 |
-| 2026-05-04 | Everton     | Man City       |        24.6 |     28.1 |        47.3 |           -10.8 |            17.3 |           -28.1 |
+| Date       | Home    | Away     |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:--------|:---------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2026-05-04 | Chelsea | Forest   |        42.6 |     29.3 |        28.1 |           -15.7 |            39.6 |           -55.4 |
+| 2026-05-04 | Everton | Man City |        25.0 |     28.3 |        46.7 |           -10.8 |            17.3 |           -28.1 |
 
 ***
 
@@ -41,7 +38,7 @@ python main.py
 | :--- | :--- |
 | Fixture | **Chelsea** vs. **Forest** |
 | Prediction | Away WIN: Forest |
-| Probability | 28.4% (Raw Elo) |
+| Probability | 28.1% (Raw Elo) |
 | Form Advantage | **-55.4 Elo** (Largest differential this week) |
 
 ***
@@ -49,18 +46,18 @@ python main.py
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Aston Villa** vs. **Tottenham** |
-| Prediction | Home WIN: Aston Villa |
-| Probability | 57.0% (Raw Elo) |
-| Form Advantage | -0.35 Elo |
-| Confidence | 55.54 (Maximized) |
+| Fixture | **Everton** vs. **Man City** |
+| Prediction | Away WIN: Man City |
+| Probability | 46.7% (Raw Elo) |
+| Form Advantage | +17.28 Elo |
+| Confidence | 49.51 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Man United** (Momentum: +19.6 Elo Gain)
-* **Upcoming Match:** Home vs. Liverpool
+* **Team:** **Everton** (Momentum: -10.8 Elo Gain)
+* **Upcoming Match:** Home vs. Man City
 
 #### **Best Recent Away Form:**
 * **Team:** **Forest** (Momentum: +39.6 Elo Gain)
