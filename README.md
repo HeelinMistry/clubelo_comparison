@@ -26,42 +26,45 @@ python main.py
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home    | Away     |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:--------|:---------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-05-04 | Chelsea | Forest   |        42.6 |     29.3 |        28.1 |           -15.7 |            39.6 |           -55.4 |
-| 2026-05-04 | Everton | Man City |        25.0 |     28.3 |        46.7 |           -10.8 |            17.3 |           -28.1 |
+| Date       | Home       | Away        |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:-----------|:------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2026-05-09 | Liverpool  | Chelsea     |        52.7 |     24.6 |        22.7 |             6.4 |           -15.7 |            22.1 |
+| 2026-05-09 | Sunderland | Man United  |        20.8 |     25.2 |        54.0 |           -16.4 |            23.8 |           -40.2 |
+| 2026-05-09 | Fulham     | Bournemouth |        35.1 |     29.0 |        36.0 |             8.7 |            18.0 |            -9.3 |
+| 2026-05-09 | Man City   | Brentford   |        58.0 |     23.8 |        18.2 |            17.3 |             3.2 |            14.1 |
+| 2026-05-09 | Brighton   | Wolves      |        64.0 |     21.1 |        14.9 |             0.2 |           -15.1 |            15.2 |
 
 ***
 
 ## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Chelsea** vs. **Forest** |
-| Prediction | Away WIN: Forest |
-| Probability | 28.1% (Raw Elo) |
-| Form Advantage | **-55.4 Elo** (Largest differential this week) |
+| Fixture | **Sunderland** vs. **Man United** |
+| Prediction | Away WIN: Man United |
+| Probability | 54.0% (Raw Elo) |
+| Form Advantage | **-40.2 Elo** (Largest differential this week) |
 
 ***
 
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Everton** vs. **Man City** |
-| Prediction | Away WIN: Man City |
-| Probability | 46.7% (Raw Elo) |
-| Form Advantage | +17.28 Elo |
-| Confidence | 49.51 (Maximized) |
+| Fixture | **Brighton** vs. **Wolves** |
+| Prediction | Home WIN: Brighton |
+| Probability | 64.0% (Raw Elo) |
+| Form Advantage | +0.16 Elo |
+| Confidence | 65.52 (Maximized) |
 
 ***
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Everton** (Momentum: -10.8 Elo Gain)
-* **Upcoming Match:** Home vs. Man City
+* **Team:** **Man City** (Momentum: +17.3 Elo Gain)
+* **Upcoming Match:** Home vs. Brentford
 
 #### **Best Recent Away Form:**
-* **Team:** **Forest** (Momentum: +39.6 Elo Gain)
-* **Upcoming Match:** Chelsea vs. Away
+* **Team:** **Man United** (Momentum: +23.8 Elo Gain)
+* **Upcoming Match:** Sunderland vs. Away
 
 ***
 
