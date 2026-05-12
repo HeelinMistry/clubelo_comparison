@@ -6,7 +6,6 @@
 
 | Date       | Home        | Away           |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
 |:-----------|:------------|:---------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-05-11 | Tottenham   | Leeds          |        38.9 |     27.6 |        33.4 |            22.5 |            18.6 |             3.9 |
 | 2026-05-13 | Man City    | Crystal Palace |        61.7 |     22.2 |        16.1 |            10.3 |           -14.5 |            24.8 |
 | 2026-05-15 | Aston Villa | Liverpool      |        35.0 |     29.3 |        35.8 |           -21.0 |             6.4 |           -27.4 |
 
@@ -35,12 +34,12 @@
 
 ## ✨ TEAM FORM SPOTLIGHTS
 #### **Best Recent Home Form:**
-* **Team:** **Tottenham** (Momentum: +22.5 Elo Gain)
-* **Upcoming Match:** Home vs. Leeds
+* **Team:** **Man City** (Momentum: +10.3 Elo Gain)
+* **Upcoming Match:** Home vs. Crystal Palace
 
 #### **Best Recent Away Form:**
-* **Team:** **Leeds** (Momentum: +18.6 Elo Gain)
-* **Upcoming Match:** Tottenham vs. Away
+* **Team:** **Liverpool** (Momentum: +6.4 Elo Gain)
+* **Upcoming Match:** Aston Villa vs. Away
 
 ***
 
