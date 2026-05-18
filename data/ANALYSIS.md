@@ -4,27 +4,21 @@
 
 ## ⚽ Upcoming Fixtures & Momentum
 
-| Date       | Home        | Away           |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
-|:-----------|:------------|:---------------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-05-17 | Everton     | Sunderland     |        53.2 |     28.0 |        18.8 |             5.8 |             7.0 |            -1.2 |
-| 2026-05-17 | Brentford   | Crystal Palace |        45.3 |     27.9 |        26.8 |             5.2 |           -13.8 |            18.9 |
-| 2026-05-17 | Man United  | Forest         |        50.0 |     26.0 |        24.0 |             6.2 |             0.7 |             5.5 |
-| 2026-05-17 | Leeds       | Brighton       |        33.8 |     27.8 |        38.4 |             8.5 |            -3.5 |            12.1 |
-| 2026-05-17 | Wolves      | Fulham         |        27.8 |     26.8 |        45.5 |            -3.7 |            -9.6 |             5.9 |
-| 2026-05-17 | Newcastle   | West Ham       |        52.7 |     24.2 |        23.1 |            14.5 |           -10.2 |            24.6 |
-| 2026-05-18 | Arsenal     | Burnley        |        84.2 |     11.9 |         3.9 |            11.8 |             1.5 |            10.4 |
-| 2026-05-19 | Chelsea     | Tottenham      |        49.4 |     25.5 |        25.1 |            -7.3 |            14.2 |           -21.4 |
-| 2026-05-19 | Bournemouth | Man City       |        28.6 |     26.1 |        45.3 |            20.6 |            10.8 |             9.8 |
+| Date       | Home        | Away      |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
+|:-----------|:------------|:----------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
+| 2026-05-18 | Arsenal     | Burnley   |        84.2 |     11.9 |         3.9 |            11.8 |             1.5 |            10.4 |
+| 2026-05-19 | Chelsea     | Tottenham |        49.4 |     25.5 |        25.1 |            -7.3 |            14.2 |           -21.4 |
+| 2026-05-19 | Bournemouth | Man City  |        28.6 |     26.1 |        45.3 |            20.6 |            10.8 |             9.8 |
 
 ***
 
 ## 🥇 MOST MOMENTUM-FAVORED PREDICTION (Highest Form Backing)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Newcastle** vs. **West Ham** |
-| Prediction | Home WIN: Newcastle |
-| Probability | 52.7% (Raw Elo) |
-| Form Advantage | **+24.6 Elo** (Largest differential this week) |
+| Fixture | **Chelsea** vs. **Tottenham** |
+| Prediction | Away WIN: Tottenham |
+| Probability | 25.1% (Raw Elo) |
+| Form Advantage | **-21.4 Elo** (Largest differential this week) |
 
 ***
 
