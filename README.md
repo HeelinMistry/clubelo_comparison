@@ -28,7 +28,6 @@ python main.py
 
 | Date       | Home        | Away      |   HomeWin % |   Draw % |   AwayWin % |   Home_Momentum |   Away_Momentum |   Momentum_Diff |
 |:-----------|:------------|:----------|------------:|---------:|------------:|----------------:|----------------:|----------------:|
-| 2026-05-18 | Arsenal     | Burnley   |        84.2 |     11.9 |         3.9 |            11.8 |             1.5 |            10.4 |
 | 2026-05-19 | Chelsea     | Tottenham |        49.4 |     25.5 |        25.1 |            -7.3 |            14.2 |           -21.4 |
 | 2026-05-19 | Bournemouth | Man City  |        28.6 |     26.1 |        45.3 |            20.6 |            10.8 |             9.8 |
 
@@ -47,11 +46,11 @@ python main.py
 ## 📈 MOST CONFIDENT PREDICTION (Highest Weighted Score)
 | Key | Value |
 | :--- | :--- |
-| Fixture | **Arsenal** vs. **Burnley** |
-| Prediction | Home WIN: Arsenal |
-| Probability | 84.2% (Raw Elo) |
-| Form Advantage | +11.82 Elo |
-| Confidence | 85.24 (Maximized) |
+| Fixture | **Chelsea** vs. **Tottenham** |
+| Prediction | Home WIN: Chelsea |
+| Probability | 49.4% (Raw Elo) |
+| Form Advantage | -7.29 Elo |
+| Confidence | 47.26 (Maximized) |
 
 ***
 
